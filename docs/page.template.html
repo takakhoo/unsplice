@@ -1,0 +1,371 @@
+<title>Unsplice</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@500;600&display=swap">
+<style>
+/* Layout: one reading column of instrument panels; each panel pairs a claim with something you can operate. */
+:root {
+  --bg: #f4f6f8; --panel: #ffffff; --fg: #111a24; --muted: #5b6876; --rule: #d7dde3;
+  --true: #1f5fd1; --leak: #d4472a; --ok: #12805c; --soft: #e9eef4;
+  --display: "IBM Plex Sans Condensed", "Arial Narrow", system-ui, sans-serif;
+  --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0e141b; --panel: #151d27; --fg: #e8edf2; --muted: #93a1b0; --rule: #2a3644;
+  --true: #6ea3ff; --leak: #ff8566; --ok: #4fd1a5; --soft: #1c2733; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0e141b; --panel: #151d27; --fg: #e8edf2; --muted: #93a1b0; --rule: #2a3644;
+  --true: #6ea3ff; --leak: #ff8566; --ok: #4fd1a5; --soft: #1c2733; color-scheme: dark }
+* { box-sizing: border-box }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 16px; line-height: 1.55; margin: 0 }
+.wrap { max-width: 980px; margin: 0 auto; padding-inline: 20px; padding-block: 36px 64px; display: flex; flex-direction: column; gap: 44px }
+h1 { font-family: var(--display); font-weight: 600; font-size: clamp(2.4rem, 7vw, 4rem); line-height: 1; margin: 0; letter-spacing: -0.01em }
+h2 { font-family: var(--display); font-weight: 600; font-size: 1.7rem; line-height: 1.15; margin: 0 0 6px; text-wrap: balance }
+h3 { font-size: .78rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); margin: 0 0 8px }
+p { margin: 0; max-width: 68ch }
+a { color: var(--true) }
+.lede { font-size: 1.14rem; max-width: 62ch }
+.eyebrow { font-family: var(--mono); font-size: .8rem; color: var(--muted) }
+header { display: flex; flex-direction: column; gap: 16px }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule) }
+.stat { padding: 14px 14px 14px 0; min-width: 0 }
+.stat b { display: block; font-family: var(--display); font-size: 2rem; line-height: 1.1; font-variant-numeric: tabular-nums }
+.stat span { font-size: .86rem; color: var(--muted) }
+section { display: flex; flex-direction: column; gap: 16px }
+.panel { background: var(--panel); border: 1px solid var(--rule); border-radius: 6px; padding: 18px; display: flex; flex-direction: column; gap: 14px; min-width: 0 }
+.row { display: flex; flex-wrap: wrap; gap: 14px; align-items: flex-end }
+.row > * { min-width: 0 }
+.chips { display: flex; flex-wrap: wrap; gap: 8px }
+button.chip { font: 500 .85rem var(--mono); color: var(--fg); background: var(--soft); border: 1px solid var(--rule); border-radius: 999px; padding: 6px 12px; cursor: pointer }
+button.chip[aria-pressed="true"] { background: var(--fg); color: var(--bg); border-color: var(--fg) }
+button.chip:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--true); outline-offset: 2px }
+.players { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 12px }
+.player { display: flex; flex-direction: column; gap: 6px; min-width: 0 }
+.player audio { width: 100% }
+.tag { font: 500 .78rem var(--mono); color: var(--muted) }
+.tag i { display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 6px; vertical-align: baseline }
+.quote { font-family: var(--mono); font-size: .88rem; background: var(--soft); border-radius: 4px; padding: 10px 12px; overflow-wrap: anywhere }
+.quote small { display: block; color: var(--muted); font-size: .74rem; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 2px }
+canvas { width: 100%; display: block; border-radius: 3px; image-rendering: pixelated; background: var(--soft) }
+.heat { display: flex; flex-direction: column; gap: 10px }
+label { display: flex; flex-direction: column; gap: 4px; font-size: .84rem; color: var(--muted); flex: 1 1 200px }
+label output, .readout b { font-family: var(--mono); color: var(--fg); font-variant-numeric: tabular-nums }
+input[type=range] { width: 100%; accent-color: var(--true) }
+input[type=number], select { font: 500 .95rem var(--mono); color: var(--fg); background: var(--panel); border: 1px solid var(--rule); border-radius: 4px; padding: 6px 8px; width: 100% }
+.readouts { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px }
+.readout { border-left: 3px solid var(--rule); padding-left: 10px; min-width: 0 }
+.readout b { display: block; font-size: 1.25rem }
+.readout span { font-size: .8rem; color: var(--muted) }
+.readout.bad { border-color: var(--leak) } .readout.good { border-color: var(--ok) }
+.chart { position: relative; min-width: 0 }
+.chart svg { width: 100%; height: auto; display: block }
+.chart text { fill: var(--muted); font: 11px var(--mono) }
+.tip { position: absolute; pointer-events: none; background: var(--fg); color: var(--bg); font: 12px var(--mono); padding: 6px 8px; border-radius: 4px; white-space: nowrap; transform: translate(-50%, -120%); z-index: 2 }
+.legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: .82rem; color: var(--muted) }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px }
+.tablewrap { overflow-x: auto }
+table { border-collapse: collapse; width: 100%; font-size: .88rem; font-variant-numeric: tabular-nums }
+th, td { text-align: left; padding: 7px 10px 7px 0; border-bottom: 1px solid var(--rule); vertical-align: top }
+th { font-size: .74rem; letter-spacing: .07em; text-transform: uppercase; color: var(--muted); font-weight: 600 }
+td.y { color: var(--leak); font-weight: 600 } td.n { color: var(--muted) }
+.math { font-family: var(--mono); font-size: .95rem; background: var(--soft); border-radius: 4px; padding: 10px 12px; overflow-x: auto; white-space: nowrap }
+ul { margin: 0; padding-left: 20px; max-width: 68ch } li { margin-bottom: 6px }
+footer { color: var(--muted); font-size: .86rem; border-top: 1px solid var(--rule); padding-top: 16px }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important } }
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">federated speech recognition · gradient leakage · research demo</div>
+  <h1>Unsplice</h1>
+  <p class="lede">A federated speech recognizer sends the server a model update and keeps the audio on the device. For models that read overlapping windows of frames, that update contains the speech. This page lets you hear it, run the attack yourself, and see where it stops.</p>
+  <div class="stats" id="stats"></div>
+</header>
+
+<section>
+  <div><h2>Hear what one gradient gives away</h2>
+  <p>Each clip below was attacked once: the client computed one gradient on the utterance, and the attacker saw only that gradient and the public model. The features come back exactly; a public vocoder turns them into sound. No transcript was used.</p></div>
+  <div class="panel">
+    <div class="chips" id="uttChips" role="group" aria-label="Utterance"></div>
+    <div class="players" id="players"></div>
+    <div class="row">
+      <div class="quote" style="flex:1 1 280px"><small>What was said</small><span id="refText"></span></div>
+      <div class="quote" style="flex:1 1 280px"><small>Whisper on the reconstructed audio</small><span id="hypText"></span></div>
+    </div>
+    <div class="heat">
+      <div><div class="tag"><i style="background:var(--true)"></i>true features (26 MFCCs per 20 ms frame)</div><canvas id="cvTrue" height="52"></canvas></div>
+      <div><div class="tag"><i style="background:var(--leak)"></i>recovered from the gradient</div><canvas id="cvRec" height="52"></canvas></div>
+    </div>
+    <div class="readouts" id="uttReadouts"></div>
+  </div>
+</section>
+
+<section>
+  <div><h2>Run the attack in your browser</h2>
+  <p>A small model of the same shape: 4 features per frame, windows of 5 frames, a 48-unit first layer. The page builds the first-layer gradient for a random utterance, takes its row space, and solves the linear system. Counting equations against unknowns gives a limit of (5 − 1) × 4 + 1 = 17 frames. Drag the length past it.</p></div>
+  <div class="panel">
+    <div class="row">
+      <label for="liveT">Utterance length <output id="liveTOut"></output><input id="liveT" type="range" min="4" max="26" value="12"></label>
+      <label for="liveNoise">Noise added to the gradient <output id="liveNoiseOut"></output><input id="liveNoise" type="range" min="0" max="10" value="0"></label>
+      <button class="chip" id="liveNew" type="button">New utterance</button>
+    </div>
+    <div class="readouts" id="liveReadouts"></div>
+    <div class="row">
+      <div class="chart" style="flex:1 1 300px"><h3>Singular values of the gradient</h3><div id="liveSpec"></div></div>
+      <div class="heat" style="flex:1 1 300px">
+        <div><div class="tag"><i style="background:var(--true)"></i>true features</div><canvas id="liveTrue" height="40"></canvas></div>
+        <div><div class="tag"><i style="background:var(--leak)"></i>recovered</div><canvas id="liveRec" height="40"></canvas></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div><h2>Why it works</h2>
+  <p>The first layer applies the same weights W to every window c of k frames. Whatever the rest of the network does, the chain rule makes its gradient a sum with one term per window:</p></div>
+  <div class="math">∇W = Σ<sub>p</sub> g<sub>p</sub> c<sub>p</sub>ᵀ &nbsp;&nbsp; ∇b = Σ<sub>p</sub> g<sub>p</sub></div>
+  <p>So the rows of [∇W | ∇b] span the vectors [c, 1], and the rank counts the windows. Neighbouring windows share frames, which makes "every window lies in the span" a linear system in the features. It has at least as many equations as unknowns up to</p>
+  <div class="math">windows ≤ (k − s) × F + 1 &nbsp;&nbsp; (kernel k, stride s, F features per frame)</div>
+  <p>With float32 gradients the last window of that budget is lost to rounding, so the measured limit on real models is (k − s) × F.</p>
+  <div class="panel">
+    <h3>Capacity of a front end</h3>
+    <div class="row">
+      <label for="capPreset">Front end<select id="capPreset"></select></label>
+      <label for="capK">Kernel k (frames)<input id="capK" type="number" min="1" max="64" value="13"></label>
+      <label for="capS">Stride s<input id="capS" type="number" min="1" max="64" value="1"></label>
+      <label for="capF">Features F<input id="capF" type="number" min="1" max="512" value="26"></label>
+      <label for="capHz">Frames per second<input id="capHz" type="number" min="1" max="16000" value="50"></label>
+    </div>
+    <div class="readouts" id="capReadouts"></div>
+  </div>
+</section>
+
+<section>
+  <div><h2>Every utterance we attacked</h2>
+  <p>LibriSpeech test-clean, one float32 gradient per utterance. Blue: closed form on the first layer. Green: sequential decoding from deeper layers. Pink: recordings with digital silence, where the solution is not unique. Orange: the previous method, gradient matching with the transcript given. Hover a point.</p></div>
+  <div class="panel">
+    <div class="legend" id="scatterLegend"></div>
+    <div class="chart" id="scatter"></div>
+  </div>
+  <div class="row">
+    <div class="panel" style="flex:1 1 320px"><h3>Error around the predicted capacity</h3><div class="chart" id="cliff"></div><div class="legend" id="cliffLegend"></div></div>
+    <div class="panel" style="flex:1 1 320px"><h3>Noise against the weakest singular value</h3><div class="chart" id="noise"></div><p style="font-size:.86rem;color:var(--muted)">ρ = spectral norm of the noise ÷ smallest signal singular value. The error follows ρ until the span is lost near ρ = 1.</p></div>
+  </div>
+</section>
+
+<section>
+  <div><h2>What a server sees in practice</h2>
+  <p>Updates arrive as weight differences after local training. Median error of the closed form in each condition (features have a typical magnitude of 8, so anything under 0.01 is a full recovery).</p></div>
+  <div class="panel"><div class="tablewrap"><table id="flTable"></table></div></div>
+</section>
+
+<section>
+  <div><h2>Which models leak</h2>
+  <p>Whether a layer gives away its inputs is decided by its shape. For one 5-second utterance, the rank of early-layer gradients (Whisper and wav2vec 2.0 with their released weights):</p></div>
+  <div class="panel"><div class="tablewrap"><table id="probeTable"></table></div></div>
+</section>
+
+<section>
+  <div><h2>Limits</h2></div>
+  <ul id="limits"></ul>
+</section>
+
+<footer>Unsplice. Code, per-utterance results and the papers: github.com/takakhoo/unsplice. Data: LibriSpeech test-clean. This is privacy research on public data; use it only on models and data you are authorised to test.</footer>
+</div>
+
+<script>
+const DATA = /*DATA*/null;
+const $ = id => document.getElementById(id);
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const fmt = (x, d = 1) => x == null ? "n/a" : Number(x).toFixed(d);
+const sci = x => x == null ? "n/a" : (x === 0 ? "0" : x.toExponential(1).replace("e", "·10^"));
+
+/* ---------- header ---------- */
+$("stats").innerHTML = DATA.stats.map(s => `<div class="stat"><b>${s.value}</b><span>${s.label}</span></div>`).join("");
+
+/* ---------- heatmaps ---------- */
+function heat(canvas, rows, lo, hi, colVar) {
+  const T = rows.length, F = rows[0].length, ctx = canvas.getContext("2d");
+  canvas.width = T; canvas.height = F;
+  const img = ctx.createImageData(T, F);
+  const c = css(colVar).match(/[0-9a-f]{2}/gi).map(h => parseInt(h, 16));
+  const bg = css("--panel").match(/[0-9a-f]{2}/gi).map(h => parseInt(h, 16));
+  for (let t = 0; t < T; t++) for (let f = 0; f < F; f++) {
+    const v = Math.min(1, Math.max(0, (rows[t][f] - lo) / (hi - lo))), i = 4 * ((F - 1 - f) * T + t);
+    for (let k = 0; k < 3; k++) img.data[i + k] = bg[k] + (c[k] - bg[k]) * v;
+    img.data[i + 3] = 255;
+  }
+  ctx.putImageData(img, 0, 0);
+}
+function range(rows) {
+  const flat = rows.flat().slice().sort((a, b) => a - b);
+  return [flat[Math.floor(flat.length * 0.02)], flat[Math.floor(flat.length * 0.98)]];
+}
+
+/* ---------- listen ---------- */
+let current = 0;
+function showUtt(i) {
+  current = i;
+  const u = DATA.demo[i];
+  [...$("uttChips").children].forEach((b, j) => b.setAttribute("aria-pressed", j === i));
+  const kinds = [["original", "original recording", "--muted"], ["reconstructed", "reconstructed from the gradient", "--leak"], ["griffinlim", "same features, no learned vocoder", "--muted"]];
+  $("players").innerHTML = kinds.filter(k => u.audio[k[0]]).map(k =>
+    `<div class="player"><div class="tag"><i style="background:var(${k[2]})"></i>${k[1]}</div><audio controls preload="none" src="${u.audio[k[0]]}"></audio></div>`).join("");
+  $("refText").textContent = u.ref; $("hypText").textContent = u.hyp_rec;
+  const body = r => r.map(row => row.slice(1));
+  const [lo, hi] = range(body(u.x));
+  heat($("cvTrue"), body(u.x), lo, hi, "--true"); heat($("cvRec"), body(u.X), lo, hi, "--leak");
+  $("uttReadouts").innerHTML = [[`${fmt(u.seconds, 1)} s`, "length"], [`${u.x.length}`, "frames, read from the gradient's rank"], [sci(u.feat_mae), "mean abs. feature error"], [fmt(u.spk_sim, 2), "speaker similarity to the original"]]
+    .map(r => `<div class="readout"><b>${r[0]}</b><span>${r[1]}</span></div>`).join("");
+}
+$("uttChips").innerHTML = DATA.demo.map((u, i) => `<button class="chip" type="button" aria-pressed="false" data-i="${i}">${fmt(u.seconds, 1)} s · ${u.method}</button>`).join("");
+$("uttChips").addEventListener("click", e => { const b = e.target.closest("button"); if (b) showUtt(+b.dataset.i); });
+
+/* ---------- live attack: small dense linear algebra ---------- */
+let seed = 7;
+function rng() { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296; }
+function gauss() { return Math.sqrt(-2 * Math.log(rng() + 1e-12)) * Math.cos(2 * Math.PI * rng()); }
+function jacobiEig(A) {           // symmetric eigen-decomposition; returns {vals, vecs (columns)}
+  const n = A.length, V = [...Array(n)].map((_, i) => [...Array(n)].map((_, j) => +(i === j)));
+  A = A.map(r => r.slice());
+  for (let sweep = 0; sweep < 60; sweep++) {
+    let off = 0;
+    for (let p = 0; p < n; p++) for (let q = p + 1; q < n; q++) off += A[p][q] * A[p][q];
+    if (off < 1e-30) break;
+    for (let p = 0; p < n; p++) for (let q = p + 1; q < n; q++) {
+      if (Math.abs(A[p][q]) < 1e-300) continue;
+      const th = (A[q][q] - A[p][p]) / (2 * A[p][q]), t = Math.sign(th || 1) / (Math.abs(th) + Math.sqrt(th * th + 1));
+      const c = 1 / Math.sqrt(t * t + 1), s = t * c;
+      for (let k = 0; k < n; k++) { const a = A[k][p], b = A[k][q]; A[k][p] = c * a - s * b; A[k][q] = s * a + c * b; }
+      for (let k = 0; k < n; k++) { const a = A[p][k], b = A[q][k]; A[p][k] = c * a - s * b; A[q][k] = s * a + c * b; }
+      for (let k = 0; k < n; k++) { const a = V[k][p], b = V[k][q]; V[k][p] = c * a - s * b; V[k][q] = s * a + c * b; }
+    }
+  }
+  const idx = [...Array(n).keys()].sort((i, j) => A[j][j] - A[i][i]);
+  return { vals: idx.map(i => Math.max(A[i][i], 0)), vecs: idx.map(i => V.map(r => r[i])) };
+}
+function solve(N, b) {            // Gaussian elimination with partial pivoting and a tiny ridge
+  const n = b.length, A = N.map((r, i) => { const x = r.slice(); x[i] += 1e-12; x.push(b[i]); return x; });
+  for (let c = 0; c < n; c++) {
+    let p = c; for (let r = c + 1; r < n; r++) if (Math.abs(A[r][c]) > Math.abs(A[p][c])) p = r;
+    [A[c], A[p]] = [A[p], A[c]];
+    const d = A[c][c] || 1e-300;
+    for (let r = c + 1; r < n; r++) { const f = A[r][c] / d; if (f) for (let k = c; k <= n; k++) A[r][k] -= f * A[c][k]; }
+  }
+  const x = Array(n).fill(0);
+  for (let r = n - 1; r >= 0; r--) { let s = A[r][n]; for (let k = r + 1; k < n; k++) s -= A[r][k] * x[k]; x[r] = s / (A[r][r] || 1e-300); }
+  return x;
+}
+const F = 4, CTX = 2, K = 2 * CTX + 1, D = K * F, H = 48;
+let liveX = null;
+function newUtterance(Tmax) {
+  liveX = []; let v = Array(F).fill(0).map(gauss);
+  for (let t = 0; t < Tmax; t++) { v = v.map(a => 0.75 * a + 0.9 * gauss()); liveX.push(v.slice()); }
+}
+function window_(X, t) { const w = []; for (let j = -CTX; j <= CTX; j++) { const r = X[t + j]; for (let f = 0; f < F; f++) w.push(r ? r[f] : 0); } return w; }
+function runLive() {
+  const T = +$("liveT").value, lvl = +$("liveNoise").value, X = liveX.slice(0, T);
+  // the client's gradient: sum over frames of (backward signal) x [window, 1]
+  const M = [...Array(H)].map(() => Array(D + 1).fill(0));
+  const save = seed; seed = 12345 + T;
+  for (let t = 0; t < T; t++) { const w = window_(X, t).concat([1]); for (let h = 0; h < H; h++) { const g = gauss(); for (let d = 0; d <= D; d++) M[h][d] += g * w[d]; } }
+  let rms = 0; M.forEach(r => r.forEach(v => rms += v * v)); rms = Math.sqrt(rms / (H * (D + 1)));
+  const sigma = lvl === 0 ? 0 : rms * Math.pow(10, -6 + lvl * 0.5);
+  if (sigma) M.forEach(r => r.forEach((_, d) => r[d] += sigma * gauss()));
+  seed = save;
+  // the attacker: row space from the Gram matrix, rank from the largest drop
+  const G = [...Array(D + 1)].map((_, i) => [...Array(D + 1)].map((_, j) => { let s = 0; for (let h = 0; h < H; h++) s += M[h][i] * M[h][j]; return s; }));
+  const { vals, vecs } = jacobiEig(G), sv = vals.map(Math.sqrt).map(v => v / Math.sqrt(vals[0]));
+  let rank = 1, best = 0;
+  for (let i = 0; i < D; i++) { const gap = Math.log10(Math.max(sv[i], 1e-9)) - Math.log10(Math.max(sv[i + 1], 1e-9)); if (gap > best) { best = gap; rank = i + 1; } }
+  if (best < 0.5) rank = D + 1;
+  const Te = Math.min(rank, 26), B = vecs.slice(0, Math.min(rank, D + 1));
+  const P = [...Array(D + 1)].map((_, i) => [...Array(D + 1)].map((_, j) => (i === j) - B.reduce((s, v) => s + v[i] * v[j], 0)));
+  const n = Te * F, N = [...Array(n)].map(() => Array(n).fill(0)), rhs = Array(n).fill(0);
+  for (let t = 0; t < Te; t++) for (let j = 0; j < K; j++) { const a = t + j - CTX; if (a < 0 || a >= Te) continue;
+    for (let f = 0; f < F; f++) { rhs[a * F + f] -= P[j * F + f][D];
+      for (let j2 = 0; j2 < K; j2++) { const a2 = t + j2 - CTX; if (a2 < 0 || a2 >= Te) continue;
+        for (let f2 = 0; f2 < F; f2++) N[a * F + f][a2 * F + f2] += P[j * F + f][j2 * F + f2]; } } }
+  const x = solve(N, rhs), Xr = [...Array(Te)].map((_, t) => x.slice(t * F, t * F + F));
+  let num = 0, den = 0;
+  for (let t = 0; t < T; t++) for (let f = 0; f < F; f++) { const e = (Xr[t] ? Xr[t][f] : 0) - X[t][f]; num += e * e; den += X[t][f] * X[t][f]; }
+  const rel = Math.sqrt(num / den), ok = rel < 1e-2 && Te === T;
+  $("liveTOut").textContent = `${T} frames`; $("liveNoiseOut").textContent = lvl === 0 ? "none" : `${(sigma / rms).toExponential(0)} of RMS`;
+  $("liveReadouts").innerHTML = [[`${rank > D ? "saturated" : rank}`, "frames, read from the rank", rank === T ? "good" : "bad"], ["17", "limit from counting, (k − s) × F + 1", ""], [sci(rel), "relative error of the recovered features", ok ? "good" : "bad"], [ok ? "recovered" : (T > 17 ? "over capacity" : "lost"), "outcome", ok ? "good" : "bad"]]
+    .map(r => `<div class="readout ${r[2]}"><b>${r[0]}</b><span>${r[1]}</span></div>`).join("");
+  const all = X.flat(), lo = Math.min(...all), hi = Math.max(...all);
+  heat($("liveTrue"), X, lo, hi, "--true");
+  heat($("liveRec"), [...Array(T)].map((_, t) => Xr[t] || Array(F).fill(lo)), lo, hi, "--leak");
+  // spectrum
+  const W = 360, Hh = 150, pad = 30, y = v => pad / 3 + (Hh - pad) * (1 - (Math.log10(Math.max(v, 1e-9)) + 9) / 9), bw = (W - pad - 6) / (D + 1);
+  $("liveSpec").innerHTML = `<svg viewBox="0 0 ${W} ${Hh}" role="img" aria-label="Singular values, log scale">` +
+    [0, -3, -6, -9].map(e => `<line x1="${pad}" x2="${W}" y1="${y(10 ** e)}" y2="${y(10 ** e)}" stroke="${css("--rule")}"/><text x="2" y="${y(10 ** e) + 4}">1e${e}</text>`).join("") +
+    sv.map((v, i) => `<rect x="${pad + i * bw + 1}" y="${y(v)}" width="${bw - 2}" height="${Math.max(1, Hh - pad * 2 / 3 - y(v))}" fill="${i < T ? css("--true") : css("--muted")}"/>`).join("") +
+    `<line x1="${pad + T * bw}" x2="${pad + T * bw}" y1="4" y2="${Hh - pad * 2 / 3}" stroke="${css("--leak")}" stroke-dasharray="3 3"/><text x="${Math.min(W - 70, pad + T * bw + 4)}" y="12">true length</text></svg>`;
+}
+["liveT", "liveNoise"].forEach(id => $(id).addEventListener("input", runLive));
+$("liveNew").addEventListener("click", () => { seed = (Date.now() & 0xffff) + 1; newUtterance(26); runLive(); });
+
+/* ---------- capacity calculator ---------- */
+const PRESETS = [["DeepSpeech-1, 6 context frames", 13, 1, 26, 50], ["DeepSpeech-1, 9 context frames (Mozilla default)", 19, 1, 26, 50], ["Transformer-CTC conv (pfl4asr)", 7, 3, 80, 100],
+  ["Whisper encoder conv1", 3, 1, 80, 100], ["wav2vec 2.0 first conv (raw audio)", 10, 5, 1, 16000], ["No overlap (patch embedding)", 4, 4, 80, 100]];
+$("capPreset").innerHTML = PRESETS.map((p, i) => `<option value="${i}">${p[0]}</option>`).join("");
+function runCap() {
+  const k = +$("capK").value, s = +$("capS").value, Fq = +$("capF").value, hz = +$("capHz").value;
+  const cap = Math.max(0, (k - s) * Fq), secs = cap * s / hz;
+  $("capReadouts").innerHTML = [[cap.toLocaleString(), "windows before the system stops being unique", cap > 50 ? "bad" : "good"], [secs >= 0.1 ? `${fmt(secs, 1)} s` : `${(secs * 1000).toFixed(1)} ms`, "of audio recoverable in closed form", secs >= 1 ? "bad" : "good"], [`${k * Fq + 1}`, "dimensions of one window (the span cannot exceed this)", ""]]
+    .map(r => `<div class="readout ${r[2]}"><b>${r[0]}</b><span>${r[1]}</span></div>`).join("");
+}
+$("capPreset").addEventListener("change", e => { const p = PRESETS[+e.target.value]; $("capK").value = p[1]; $("capS").value = p[2]; $("capF").value = p[3]; $("capHz").value = p[4]; runCap(); });
+["capK", "capS", "capF", "capHz"].forEach(id => $(id).addEventListener("input", runCap));
+
+/* ---------- charts ---------- */
+function logChart(el, groups, opt) {
+  const W = opt.w || 900, Hh = opt.h || 360, m = { l: 52, r: 12, t: 10, b: 38 };
+  const x = v => m.l + (W - m.l - m.r) * ((opt.xlog ? Math.log10(v) : v) - opt.x0) / (opt.x1 - opt.x0);
+  const y = v => m.t + (Hh - m.t - m.b) * (1 - (Math.log10(Math.max(v, 10 ** opt.y0)) - opt.y0) / (opt.y1 - opt.y0));
+  let s = `<svg viewBox="0 0 ${W} ${Hh}" role="img" aria-label="${opt.label}">`;
+  for (let e = Math.ceil(opt.y0); e <= opt.y1; e += opt.ystep || 2) s += `<line x1="${m.l}" x2="${W - m.r}" y1="${y(10 ** e)}" y2="${y(10 ** e)}" stroke="${css("--rule")}"/><text x="${m.l - 6}" y="${y(10 ** e) + 4}" text-anchor="end">1e${e}</text>`;
+  opt.xticks.forEach(t => s += `<text x="${x(t)}" y="${Hh - m.b + 16}" text-anchor="middle">${opt.xfmt ? opt.xfmt(t) : t}</text>`);
+  s += `<text x="${(W + m.l) / 2}" y="${Hh - 4}" text-anchor="middle">${opt.xlabel}</text>`;
+  (opt.vlines || []).forEach(v => s += `<line x1="${x(v[0])}" x2="${x(v[0])}" y1="${m.t}" y2="${Hh - m.b}" stroke="${css("--muted")}" stroke-dasharray="4 4"/><text x="${x(v[0]) + 5}" y="${m.t + 12}">${v[1]}</text>`);
+  const pts = [];
+  groups.forEach(g => {
+    if (g.line) s += `<polyline fill="none" stroke="${css(g.color)}" stroke-width="2" points="${g.points.map(p => `${x(p.x)},${y(p.y)}`).join(" ")}"/>`;
+    g.points.forEach(p => { s += `<circle cx="${x(p.x)}" cy="${y(p.y)}" r="${g.r || 2.5}" fill="${css(g.color)}" fill-opacity="${g.alpha || 1}"/>`; pts.push({ px: x(p.x), py: y(p.y), tip: p.tip }); });
+  });
+  el.innerHTML = s + "</svg>";
+  const tip = document.createElement("div"); tip.className = "tip"; tip.hidden = true; el.appendChild(tip);
+  el.onmousemove = e => {
+    const r = el.querySelector("svg").getBoundingClientRect(), mx = (e.clientX - r.left) * W / r.width, my = (e.clientY - r.top) * Hh / r.height;
+    let best = null, bd = 400; pts.forEach(p => { const d = (p.px - mx) ** 2 + (p.py - my) ** 2; if (d < bd) { bd = d; best = p; } });
+    if (best && best.tip) { tip.hidden = false; tip.textContent = best.tip; tip.style.left = `${best.px * r.width / W}px`; tip.style.top = `${best.py * r.height / Hh}px`; } else tip.hidden = true;
+  };
+  el.onmouseleave = () => tip.hidden = true;
+}
+function drawCharts() {
+  const S = DATA.scatter, mk = (rows, name) => rows.map(r => ({ x: r[0], y: r[1], tip: `${name} · ${r[0].toFixed(1)} s · error ${r[1].toExponential(1)} · ${r[2] < 10 ? r[2].toFixed(1) : Math.round(r[2])} s to attack` }));
+  const groups = [{ color: "--true", alpha: .55, r: 2, points: mk(S.closed, "closed form") }, { color: "--ok", r: 3, points: mk(S.sequential, "sequential") },
+    { color: "--leak", r: 3, alpha: .6, points: mk(S.ambiguous, "digital silence") }, { color: "--muted", r: 5, points: mk(S.baseline, "gradient matching") }];
+  logChart($("scatter"), groups, { label: "Feature error against utterance length", x0: 0, x1: 36, y0: -8, y1: 2, xticks: [0, 5, 10, 15, 20, 25, 30, 35], xlabel: "utterance length (s)", vlines: [[6.24, "first-layer limit"]] });
+  $("scatterLegend").innerHTML = [["--true", `closed form (${S.closed.length})`], ["--ok", `sequential (${S.sequential.length})`], ["--leak", `digital silence (${S.ambiguous.length})`], ["--muted", `gradient matching (${S.baseline.length})`]]
+    .map(l => `<span><i style="background:var(${l[0]})"></i>${l[1]}</span>`).join("");
+  const cols = ["--true", "--leak", "--ok", "--muted"];
+  logChart($("cliff"), DATA.cliff.map((c, i) => ({ color: cols[i], line: true, r: 2.5, points: c.points.map(p => ({ x: p[0], y: p[1], tip: `${c.name}: ${p[0] >= 0 ? "+" : ""}${p[0]} windows · error ${p[1].toExponential(1)}` })) })),
+    { label: "Error around capacity", w: 460, h: 300, x0: -24, x1: 24, y0: -5, y1: 0.3, ystep: 1, xticks: [-20, -10, 0, 10, 20], xlabel: "windows − (k − s)F", vlines: [[0.5, ""]] });
+  $("cliffLegend").innerHTML = DATA.cliff.map((c, i) => `<span><i style="background:var(${cols[i]})"></i>${c.name}</span>`).join("");
+  logChart($("noise"), [{ color: "--true", line: true, r: 3, points: DATA.noise.map(p => ({ x: p[0], y: p[1], tip: `ρ = ${p[0]} · relative error ${p[1].toExponential(1)}` })) }],
+    { label: "Noise law", w: 460, h: 300, xlog: true, x0: -4, x1: 0.5, y0: -6, y1: 0.3, ystep: 1, xticks: [1e-4, 1e-3, 1e-2, 1e-1, 1], xfmt: t => t.toExponential(0), xlabel: "ρ", vlines: [[1, "ρ = 1"]] });
+}
+
+/* ---------- tables ---------- */
+$("flTable").innerHTML = "<tr><th>Condition</th><th>Total frames</th><th>Median error</th><th>Recovered</th></tr>" +
+  DATA.fl.map(r => `<tr><td>${r[0]}</td><td>${r[1]}</td><td>${sci(r[2])}</td><td class="${r[3] >= 0.5 ? "y" : "n"}">${Math.round(100 * r[3])}%</td></tr>`).join("");
+$("probeTable").innerHTML = "<tr><th>Model</th><th>Layer</th><th>Windows</th><th>Window dim.</th><th>Width</th><th>Gradient rank</th><th>Identifies its inputs</th></tr>" +
+  DATA.probe.map(r => `<tr><td>${r.model}</td><td>${r.layer}</td><td>${r.patches > 0 ? r.patches.toLocaleString() : "many"}</td><td>${r.patch_dim}</td><td>${r.width}</td><td>${r.rank} of ${r.max_rank}</td><td class="${r.span_identifies_patches ? "y" : "n"}">${r.span_identifies_patches ? "yes" : "no"}</td></tr>`).join("");
+$("limits").innerHTML = DATA.limits.map(l => `<li>${l}</li>`).join("");
+
+function boot() { showUtt(current); newUtterance(26); runLive(); runCap(); drawCharts(); }
+boot();
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", boot);
+new MutationObserver(boot).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+</script>
