@@ -1,0 +1,17 @@
+\begin{tabular}{@{}llrrl@{}}
+\toprule
+Model & Layer & Windows & Rank & Leaks\\
+\midrule
+wav2vec 2.0 & first conv & 15999 & 10/10 & no\\
+wav2vec 2.0 & feature proj. & 249 & 249/512 & yes\\
+Whisper & conv1 & 3000 & 241/241 & no\\
+DeepSpeech-1 & fc1 & 250 & 250/339 & yes\\
+Transf.-CTC & conv & 166 & 167/561 & yes\\
+DeepSpeech-2 & first conv & 20331 & 32/32 & no\\
+DeepSpeech-2 & RNN input & 251 & 242/800 & no\\
+QuartzNet & depthwise conv & 249 & 33/33 & no\\
+QuartzNet & pointwise conv & 249 & 65/65 & no\\
+Conformer & first conv & -- & 10/10 & no\\
+Conformer & proj. after subs. & 123 & 123/256 & yes\\
+\bottomrule
+\end{tabular}

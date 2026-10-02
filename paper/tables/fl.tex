@@ -1,0 +1,24 @@
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Condition & Median MAE & Recov.\ (\%)\\
+\midrule
+1 SGD step & $4.5\cdot10^{-3}$ & 85\\
+10 SGD steps & $4.4\cdot10^{-3}$ & 100\\
+50 SGD steps & $5.4\cdot10^{-3}$ & 90\\
+SGD, momentum 0.9 & $1.0\cdot10^{-4}$ & 95\\
+SGD, weight decay & $5.2\cdot10^{-4}$ & 100\\
+batch of 2 & $1.6\cdot10^{-3}$ & 100\\
+batch of 8 (short) & $1.3\cdot10^{-3}$ & 80\\
+batch of 16 (short) & $1.1\cdot10^{-3}$ & 85\\
+10 Adam steps & $7.4\cdot10^{0}$ & 0\\
+\midrule
+dropout 0.2 & $5.5\cdot10^{-6}$ & 98\\
+dropout 0.5 & $2.3\cdot10^{-6}$ & 98\\
+clipping to 0.01 & $1.2\cdot10^{-5}$ & 100\\
+noise $10^{-5}$ of RMS & $7.1\cdot10^{-4}$ & 82\\
+noise $10^{-3}$ of RMS & $6.6\cdot10^{-1}$ & 0\\
+8-bit quantisation & $6.1\cdot10^{0}$ & 0\\
+prune 50\% & $6.8\cdot10^{0}$ & 0\\
+sign only & $7.6\cdot10^{0}$ & 0\\
+\bottomrule
+\end{tabular}

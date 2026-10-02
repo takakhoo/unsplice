@@ -1,0 +1,299 @@
+% Review version (double blind). For camera-ready switch to \documentclass[cameraready]{Interspeech}
+% and fill in the author block below.
+\documentclass{Interspeech}
+\usepackage{booktabs,amsmath,amssymb}
+\input{../numbers.tex}
+
+\title{Frames in the Span: Exact, Label-Free Recovery of Long-Form Speech from Federated ASR Updates}
+
+% TODO(Taka): author list and affiliations for the camera-ready version.
+\author[affiliation={1}]{Anonymous}{Author}
+\address{$^1$Anonymous Institution}
+\email{anonymous@example.com}
+\keywords{federated learning, speech recognition, privacy, gradient inversion, CTC}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Federated speech recognition sends model updates to a server and keeps the audio on the device. We show
+that for acoustic models whose first layer applies one linear map to overlapping windows of feature
+frames, a single update contains the features. The rows of the first-layer gradient span the windows,
+the overlap turns membership in that span into a linear system, and a banded solve returns the
+utterance without transcript, length, loss or optimisation. The system is uniquely solvable up to
+(k-s)F windows for kernel k, stride s and F features. On LibriSpeech the closed form recovers
+\DSshortSucc\% of utterances up to 6.2 s from DeepSpeech and \TFSucc\% up to 9.6 s from a
+Transformer-CTC front end; a sequential decoder over deeper layers reaches 35 s. Synthesised audio is
+transcribed at \WerShort\% WER and the speaker identified in \SpkShort\% of cases. Local SGD, batching,
+clipping, dropout and training do not prevent the attack; local Adam, pruning and sufficient noise do.
+\end{abstract}
+
+\section{Introduction}
+
+Federated learning (FL) \cite{mcmahan2017communication} is attractive for automatic speech recognition
+(ASR) because the audio stays on the device \cite{guliani2021training,nguyen2023federated,pelikan2025enabling}.
+What leaves the device is a model update, and gradient inversion \cite{zhu2019dlg,geiping2020inverting}
+asks how much of the input an update reveals.
+
+For speech the evidence comes from optimisation attacks. Dang et al.\ \cite{dang2022speaker} search for
+DeepSpeech \cite{hannun2014deep} input features whose gradient matches the observed one, with the
+transcript and length of short utterances given, and identify the speaker in 34\% of cases; a dropout
+rate of 0.2 reduces this to 0\%. Their label attack \cite{dang2021revealing} recovers bags of word
+pieces. Later work matches gradients of small classifiers on one-second clips
+\cite{li2023speech,ovi2024gradient}, scales to long audio by reconstructing segments of a CNN classifier's
+input \cite{zeng2025recover}, or descends through the CTC loss \cite{graves2006connectionist} on
+DeepSpeech \cite{bui2025reconstructing}. Speaker information also leaks from adapted weights without
+reconstruction \cite{tomashenko2022privacy}. Optimisation attacks are slow, assume side information, and
+fail under dropout, local training or long inputs; such failures support the view that gradient leakage
+is fragile in realistic FL \cite{du2025sok,huang2021evaluating}.
+
+A second line of work is algebraic. The gradient of a linear layer is a sum of outer products, so its
+row space is the span of the layer's inputs. DAGER \cite{petrov2024dager} tests discrete tokens against
+this span, SPEAR \cite{dimitrov2024spear} separates small image batches with it, and TIGER
+\cite{kalikman2026tiger} optimises embeddings towards it. None of these addresses speech.
+
+We observe that speech front ends make the span unusually easy to read. The frames of one utterance act
+as a batch, and every frame is seen through a window that overlaps its neighbours: spliced context in
+DeepSpeech and TDNN-style models, a strided convolution in Transformer encoders. The overlap is what
+converts span membership into a linear system in the features. We contribute (i) a closed-form attack
+with a capacity law verified on four front ends, (ii) a sequential decoder for utterances beyond that
+capacity, (iii) an evaluation under the conditions of federated training, including trained models, and
+(iv) a map of which architectures and defences stop the attack.
+
+\section{The span leak}
+
+\subsection{Setting}
+A client holds features $X=(x_1,\dots,x_T)$, $x_t\in\mathbb{R}^F$. The first layer reads windows
+$c_p(X)=[x_{ps-a},\dots,x_{ps-a+k-1}]\in\mathbb{R}^{kF}$, $p=1,\dots,P$, zero outside $1..T$, and
+computes $Wc_p+b$ with $W\in\mathbb{R}^{H\times kF}$. DeepSpeech-1 splices $c$ frames of context on each
+side ($k=2c+1$, $s=1$). The Transformer encoder of the FL benchmark in \cite{pelikan2025enabling} uses a
+1-D convolution with $k=7$, $s=3$ on $F=80$ log-mel bins. The server is honest but curious: it knows the
+model it sent and receives the update of one client.
+
+\subsection{Span and length}
+For any loss $L$ and any later layers, with $g_p=\partial L/\partial(Wc_p+b)$,
+\begin{equation}
+\nabla_W L=\sum_{p=1}^{P} g_p\,c_p^{\top},\qquad \nabla_b L=\sum_{p=1}^{P} g_p .
+\label{eq:grad}
+\end{equation}
+The rows of $M=[\nabla_W L\mid\nabla_b L]$ lie in $\mathcal{S}=\mathrm{span}\{[c_p,1]\}_{p}$, and the row
+space equals $\mathcal{S}$ when the $g_p$ are linearly independent. This requires $H\ge P$ and holds
+generically when a nonlinearity follows. The rank of $M$ is then the number of independent windows, so
+the update reveals the length of the utterance.
+
+\subsection{Closed form and capacity}
+Let $\Pi^{\perp}$ be the projector onto $\mathcal{S}^{\perp}$, from the SVD of $M$. The true features
+satisfy
+\begin{equation}
+\Pi^{\perp}\,[c_p(X),1]=0,\qquad p=1,\dots,P .
+\label{eq:lin}
+\end{equation}
+Each $c_p$ copies frames of $X$, so \eqref{eq:lin} is linear in $X$. Its normal matrix is block-banded
+with bandwidth $kF$ and is solved by banded Cholesky in $O(TF(kF)^2)$. There are $P(kF+1-P)$ equations
+for about $sPF$ unknowns, which gives the necessary condition
+\begin{equation}
+P\;\le\;(k-s)F+1 .
+\label{eq:cap}
+\end{equation}
+Without overlap ($k=s$) each window may be any element of $\mathcal{S}$ and nothing is identified. The
+rank fixes $P$ unless frames repeat exactly; we therefore take the shortest length whose solution lies
+in the span, and test uniqueness by perturbing the solve.
+
+\subsection{What federated training changes}
+After $K$ local SGD steps the server forms $(W_0-W_K)/\eta=\sum_{j}\sum_p g_p^{(j)}c_p^{\top}$. The
+windows do not depend on the weights, so the row space is unchanged. Momentum reweights the terms and
+weight decay adds a known multiple of $W_0$. A batch places the windows of all its utterances in one
+span, so \eqref{eq:cap} bounds the total number of frames. Norm clipping rescales $M$. Dropout after the
+first layer alters $g_p$ only. Per-coordinate optimisers such as Adam destroy the structure.
+
+\subsection{Noise}
+For an update $M+E$ with i.i.d.\ Gaussian $E$ of standard deviation $\sigma$,
+$\lVert E\rVert_2\approx\sigma(\sqrt{H}+\sqrt{kF+1})$ and Wedin's theorem bounds the rotation of the span by
+$\rho=\lVert E\rVert_2/s_P(M)$, where $s_P$ is the weakest signal singular value. The error should grow linearly
+with $\rho$ and the attack should fail near $\rho=1$.
+
+\section{Beyond the first layer}
+
+Past the capacity the first-layer span is the whole space. Deeper layers still leak. In DeepSpeech-1
+the second and third layers and the LSTM input weights act on $h_1(c_t)$, $h_2(c_t)$, $h_3(c_t)$,
+clipped-ReLU functions of a single window with 2{,}048 to 4{,}096 units. By \eqref{eq:grad} their
+gradients leak $\mathcal{S}_\ell=\mathrm{span}\{[h_\ell(c_t),1]\}$, of dimension $T$ up to the layer
+width. The nonlinearity is essential: a linear stack would leak the same $(kF{+}1)$-dimensional span at
+every layer.
+
+A candidate window $c$ is tested by the residual
+$r(c)=\sum_\ell\lVert\Pi_\ell^{\perp}[h_\ell(c),1]\rVert^2/\lVert[h_\ell(c),1]\rVert^2$, which vanishes on the windows
+of the utterance and, generically, only there. The test does not say which frame a window is, and
+descending on all frames at once collapses to an average window. The zero padding provides the order.
+The first window is $[0,\dots,0,x_1,\dots,x_{c+1}]$; we solve for it by Levenberg--Marquardt from the
+opening frames of public utterances. Each later window shares all frames but one with its predecessor,
+leaving $F$ unknowns per step. We use the spans of the second and third layers; the LSTM-input span is noisier on trained weights and is
+needed only beyond 37\,s. The last 26 frames are re-fitted jointly every 8 steps, which keeps the
+recursion from drifting. Decoding stops when $c$ consecutive frames are zero: the
+padding at the far end. The length is thus an output. A joint refinement of all frames follows.
+
+The same idea applies to any front end whose features are local in time. For Conv2dSubsampling followed
+by a linear projection \cite{gulati2020conformer}, the projection leaks the span of 7-frame receptive
+fields, and a decoder can seed on any window and extend in both directions.
+
+\section{Experiments}
+
+\subsection{Setup}
+Data: LibriSpeech \cite{panayotov2015librispeech} test-clean; one float32 gradient of the CTC loss per
+utterance. \textbf{DeepSpeech-1}: 26 MFCCs at 50\,Hz, $c=6$, three clipped-ReLU layers of 2{,}048
+(4{,}096) units, a BiLSTM, two output layers. \textbf{Transformer-CTC}: 80 log-mel bins at 100\,Hz,
+per-utterance normalisation, Conv1d$(80{\to}1536)$ with $k{=}7$, $s{=}3$ and a gated linear unit, 12
+pre-norm blocks of width 768. Both are attacked at random initialisation and along training on
+train-clean-100. The attacker receives the update and the model. Public data (train-clean-100, disjoint
+speakers) supplies starting points and trains the vocoder front end. An utterance counts as recovered if
+its mean absolute error (MAE) is below $10^{-2}$ for MFCCs, whose mean magnitude is 8, or if its SNR
+exceeds 30\,dB for normalised log-mel.
+
+\begin{table}[t]
+\caption{One update per utterance. SNR is the median over utterances of the feature-domain SNR.
+$^\dagger$length given (\TrTFsucc\% without). $^\ddagger$transcript and length given.}
+\label{tab:main}
+\centering\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}llrrr@{}}
+\toprule
+Target & Attack & $n$ & Recov. & SNR\\
+\midrule
+DS1, $\le$6.2\,s & closed form & \DSshortN & \DSshortSucc\% & \DSshortSNR\\
+DS1, 6.3--\DSlongMaxAudio\,s & sequential & \DSlongN & \DSlongSucc\% & \DSlongSNR\\
+DS1 trained & closed form & 60 & \TrDSsucc\% & \\
+DS1 trained, dropout 0.2 & closed form & 60 & \DropSucc\% & \\
+Transf., $\le$9.6\,s & closed form & \TFN & \TFSucc\% & \TFSNR\\
+Transf.\ trained & closed form$^\dagger$ & 60 & \TrTFknownSucc\% & \\
+Gradient matching$^\ddagger$ \cite{bui2025reconstructing} & 2{,}000 steps & \GMn & 0\% & $<$3\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{../../docs/figures/paper_main.pdf}
+\caption{Left: relative error of the closed form around the predicted capacity. Right: MAE against
+utterance length for all attacked utterances.}
+\label{fig:main}
+\end{figure}
+
+\subsection{Closed form}
+On DeepSpeech-1 the closed form recovers \DSshortSucc\% of the \DSshortN{} test-clean utterances that
+fit in the first layer (Table~\ref{tab:main}), with median MAE $\DSshortMAE$ in \DSshortSec\,s, and
+reads the length from the rank (Fig.~\ref{fig:spectrum}). All \DSshortFail{} failures are flagged by the uniqueness test: the
+recordings contain runs of bit-identical frames (digital silence) that make windows identical. On the
+Transformer front end, \TFSucc\% of \TFN{} utterances up to 9.6\,s are recovered at \TFSNR\,dB.
+Fig.~\ref{fig:main} (left) crops real features to exact lengths: the error stays below $10^{-3}$ up to
+$(k-s)F$ windows and reaches order one within two windows, for $(k,s,F)=(13,1,26)$, $(19,1,26)$,
+$(7,3,80)$ and $(5,2,80)$.
+
+\subsection{Long-form speech}
+The sequential decoder recovers \DSlongSucc\% of \DSlongN{} utterances between 6.3 and
+\DSlongMaxAudio\,s, with median MAE $\DSlongMAE$, including the longest utterance of the set
+(\DSlongestFrames{} frames). The remaining failures are digital silence. Decoding takes \DSlongSec\,s per utterance
+(median, one GPU) and involves neither the LSTM nor the loss. Checkpoints trained to \TrDSwer\% WER are decoded equally well
+(12 of 12 utterances).
+
+\subsection{Comparison with gradient matching}
+We rerun output-layer gradient matching through a twice-differentiable CTC with transcript and length
+given. After 2{,}000 Adam steps (\GMsec\,s) on 2\,s utterances the cosine distance is below $10^{-2}$
+and the MAE is \GMmae: the output-layer gradient has rank at most 29 and cannot determine hundreds of
+frames. Matching all layers exceeded 34\,GB of GPU memory at 100 frames.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.86\textwidth]{../../docs/figures/spectrum.pdf}
+\caption{Singular values of gradients from DeepSpeech-1, relative to the largest. Left: first layer, two
+short utterances; the spectrum drops to the float32 floor exactly at the frame count. Right: a 20\,s
+utterance saturates the first layer, but the second layer and the LSTM input weights still show the gap.}
+\label{fig:spectrum}
+\end{figure*}
+
+\begin{table}[t]
+\caption{Closed form on the first-layer update of DeepSpeech-1 under federated conditions (top, 20 trials
+each, update formed from float32 weight differences) and defences (bottom, 40 to 60 utterances each).
+Recovered: MAE below 0.1 (top), below 0.01 (bottom).}
+\label{tab:fl}
+\centering\footnotesize
+\input{../tables/fl.tex}
+\end{table}
+
+\subsection{Federated conditions and training}
+Table~\ref{tab:fl} forms the update from float32 weight differences. The closed form is unaffected by 1
+to 50 local SGD steps, momentum 0.9 and weight decay (median MAE $10^{-4}$ to $6\cdot10^{-3}$; the floor
+is rounding in the subtraction and falls with larger steps). Batches of 2 to 16 utterances within
+capacity are recovered when the attacker knows their lengths; a batch over capacity is not. Dropout rates from 0.1 to 0.5 leave \DropAllSucc\% recovered, in contrast
+with the protection reported against optimisation attacks \cite{dang2022speaker}. DeepSpeech-1
+checkpoints from initialisation to \TrDSwer\% WER are recovered at \TrDSsucc\%. On the trained
+Transformer a float32 convolution artefact lies close to the weakest signal direction and the window
+count is sometimes off by one; with the length given, \TrTFknownSucc\% are recovered.
+
+\subsection{From features to audio}
+A 6-layer Transformer maps recovered features to the mel input of a public HiFi-GAN
+\cite{kong2020hifigan}. Whisper small.en \cite{radford2023robust} transcribes the audio and ECAPA-TDNN
+embeddings \cite{desplanques2020ecapa} assign it to one of \Speakers{} enrolled test speakers
+(Table~\ref{tab:audio}). Since recovery is exact, audio from recovered and from true features scores the
+same: what the front end keeps, the update gives away.
+
+\begin{table}[t]
+\caption{Audio synthesised from recovered features: Whisper WER and speaker identification top-1.}
+\label{tab:audio}
+\centering\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+ & & \multicolumn{2}{c}{WER (\%)} & \multicolumn{2}{c}{Speaker (\%)}\\
+Reconstructions & $n$ & orig. & recov. & orig. & recov.\\
+\midrule
+DS1, $\le$6.2\,s & \AudNShort & \WerOrigShort & \WerShort & \SpkOrigShort & \SpkShort\\
+DS1, 6.3--35\,s & \AudNLong & \WerOrigLong & \WerLong & \SpkOrigLong & \SpkLong\\
+Transformer, $\le$9.6\,s & \AudNTf & \WerOrigTf & \WerTf & \SpkOrigTf & \SpkTf\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{What stops the attack}
+Local Adam, magnitude pruning of half the entries and sign compression break the low-rank structure
+(0\% recovered). Gaussian noise behaves as predicted: the relative error equals about $0.5\rho$ up to
+$\rho\approx0.3$, and the attack fails near $\rho=1$, a noise level near $10^{-3}$ of the gradient RMS
+for utterances of a few seconds. Central differential privacy adds noise after aggregation and does not
+protect a client from the server.
+
+\begin{table}[t]
+\caption{Gradient rank of early layers on one 5\,s utterance (Whisper and wav2vec 2.0 with released
+weights). A layer leaks a usable span when the rank equals the number of windows and is below both of its
+dimensions.}
+\label{tab:probe}
+\centering\footnotesize
+\setlength{\tabcolsep}{3pt}
+\input{../tables/probe.tex}
+\end{table}
+
+Architecture matters most (Table~\ref{tab:probe}). The first layers of pretrained Whisper (inputs padded to 3{,}000 frames) and wav2vec
+2.0 \cite{baevski2020wav2vec} (10-sample windows), of DeepSpeech-2 \cite{amodei2015deep} (32 channels)
+and of QuartzNet \cite{kriman2020quartznet} (depthwise) are saturated and leak no usable span. The
+wav2vec 2.0 feature projection and the projection after Conformer subsampling have rank equal to the
+frame count; on the latter our local decoder finds true windows but recovers only \ConfCov\% of the frames on average
+(\ConfSNR\,dB) before its chains stall, which we count as a negative result for now. Dropout stops the
+sequential decoder as well, since deeper layers see the dropped activations; it does not stop the closed form.
+
+\section{Conclusion}
+
+A wide linear layer over overlapping feature windows makes one federated update equivalent to the
+utterance, up to a capacity we can state in advance. Dropout, clipping, local SGD and training do not
+change this; breaking the low-rank structure or exceeding the capacity does. Limitations: the attack
+recovers features, and pitch in the audio is inferred by the vocoder; digital silence makes solutions
+non-unique; updates aggregated over many clients exceed the capacity. Code, per-utterance results and
+audio are in the supplementary material.
+
+\section{Generative AI Use Disclosure}
+% TODO(Taka): this section must describe the actual use and comply with the Interspeech policy before submission.
+A generative AI coding assistant was used to implement and run experiments and to draft this manuscript
+from the experimental results. The authors are responsible for the content and must revise the text
+before submission so that it complies with the Interspeech policy on generative AI.
+
+\bibliographystyle{IEEEtran}
+\bibliography{../refs}
+
+\end{document}
