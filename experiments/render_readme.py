@@ -113,7 +113,22 @@ if singles:
              conf_len=f"about {cf['median_frames'] / 100:.0f} s", conf_d=key[1:4])
 ds = df("ds1_dropout0.2_seq")
 V.update(dropseq_succ=pct(ds.get("success_rate"), 0), dropseq_n=ds.get("n", "n/a"))
-V["demo_id"] = json.load(open("docs/audio/index.json"))["featured"]
+# ---- the featured clip, as playback bars ----
+import os
+feat = json.load(open("docs/audio/index.json"))["featured"]            # e.g. short/1089-134686-0032
+uid = feat.split("/")[-1]
+clip = next(i for i in json.load(open(f"docs/audio/{feat.split('/')[0]}/demo.json"))["items"] if i["id"] == uid)
+V.update(clip_seconds=f"{clip['seconds']:.1f}", clip_ref=clip["ref"].capitalize(), clip_hyp=clip["hyp_rec"].capitalize(), clip_mae=sci(clip["feat_mae"]))
+labels = (("original", "Original recording"), ("reconstructed", "Reconstructed from one gradient"))
+att_path = "docs/audio/players/attachments.json"
+att = json.load(open(att_path)) if os.path.exists(att_path) else {}
+if all(att.get(k) for k, _ in labels):
+    # GitHub turns an uploaded attachment URL on a line of its own into an inline player.
+    V["players"] = "\n\n".join(f"**{lab}**\n\n{att[k]}" for k, lab in labels)
+else:
+    pages = "https://takakhoo.github.io/unsplice/audio/players"
+    V["players"] = "\n\n".join(f"[![{lab}, click to play](docs/audio/players/{uid}_{k}_bar.png)]({pages}/{uid}_{k}.mp4)" for k, lab in labels) + \
+        "\n\nClick a bar to play it."
 missing = set(re.findall(r"\{\{(\w+)\}\}", T)) - set(V)
 for m in missing:
     V[m] = "n/a"

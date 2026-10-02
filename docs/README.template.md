@@ -10,7 +10,13 @@ Audio synthesised from the recovered features is transcribed by Whisper at {{aud
 
 ![How the attack works](docs/figures/overview.png)
 
-**Listen:** [original](docs/audio/{{demo_id}}_original.wav) · [reconstructed from one gradient](docs/audio/{{demo_id}}_reconstructed.wav) · more in the [interactive page](https://takakhoo.github.io/unsplice/).
+## Listen
+
+{{clip_seconds}} seconds of speech from LibriSpeech, attacked once. The client computed one gradient on this utterance, and the attacker saw only that gradient and the public model: no audio, no transcript, no length.
+
+{{players}}
+
+The speaker says *"{{clip_ref}}"*. Whisper transcribes the reconstruction as *"{{clip_hyp}}"*. The recovered features match the true ones to a mean absolute error of {{clip_mae}}; the sound is produced from them by a public vocoder. Six more clips, up to 20 s, are on the [interactive page](https://takakhoo.github.io/unsplice/), and the WAV files are in [`docs/audio/`](docs/audio/).
 
 ## The result
 
@@ -36,6 +42,7 @@ Every row is one update per utterance from LibriSpeech test-clean, computed in f
 
 ## Contents
 
+- [Listen](#listen)
 - [How it works](#how-it-works)
 - [The science, step by step](#the-science-step-by-step)
 - [What a server sees in practice](#what-a-server-sees-in-practice)

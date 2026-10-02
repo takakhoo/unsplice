@@ -54,5 +54,9 @@
  "conf_d": "512",
  "dropseq_succ": "0",
  "dropseq_n": 5,
- "demo_id": "short/1089-134686-0032"
+ "clip_seconds": "4.1",
+ "clip_ref": "He is called as you know the apostle of the indies",
+ "clip_hyp": "He is called as you know the apostle of the indies",
+ "clip_mae": "1.7e-05",
+ "players": "[![Original recording, click to play](docs/audio/players/1089-134686-0032_original_bar.png)](https://takakhoo.github.io/unsplice/audio/players/1089-134686-0032_original.mp4)\n\n[![Reconstructed from one gradient, click to play](docs/audio/players/1089-134686-0032_reconstructed_bar.png)](https://takakhoo.github.io/unsplice/audio/players/1089-134686-0032_reconstructed.mp4)\n\nClick a bar to play it."
 }

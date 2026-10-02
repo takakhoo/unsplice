@@ -10,7 +10,17 @@ Audio synthesised from the recovered features is transcribed by Whisper at 3.8% 
 
 ![How the attack works](docs/figures/overview.png)
 
-**Listen:** [original](docs/audio/short/1089-134686-0032_original.wav) · [reconstructed from one gradient](docs/audio/short/1089-134686-0032_reconstructed.wav) · more in the [interactive page](https://takakhoo.github.io/unsplice/).
+## Listen
+
+4.1 seconds of speech from LibriSpeech, attacked once. The client computed one gradient on this utterance, and the attacker saw only that gradient and the public model: no audio, no transcript, no length.
+
+[![Original recording, click to play](docs/audio/players/1089-134686-0032_original_bar.png)](https://takakhoo.github.io/unsplice/audio/players/1089-134686-0032_original.mp4)
+
+[![Reconstructed from one gradient, click to play](docs/audio/players/1089-134686-0032_reconstructed_bar.png)](https://takakhoo.github.io/unsplice/audio/players/1089-134686-0032_reconstructed.mp4)
+
+Click a bar to play it.
+
+The speaker says *"He is called as you know the apostle of the indies"*. Whisper transcribes the reconstruction as *"He is called as you know the apostle of the indies"*. The recovered features match the true ones to a mean absolute error of 1.7e-05; the sound is produced from them by a public vocoder. Six more clips, up to 20 s, are on the [interactive page](https://takakhoo.github.io/unsplice/), and the WAV files are in [`docs/audio/`](docs/audio/).
 
 ## The result
 
@@ -36,6 +46,7 @@ Every row is one update per utterance from LibriSpeech test-clean, computed in f
 
 ## Contents
 
+- [Listen](#listen)
 - [How it works](#how-it-works)
 - [The science, step by step](#the-science-step-by-step)
 - [What a server sees in practice](#what-a-server-sees-in-practice)
