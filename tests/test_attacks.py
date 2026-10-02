@@ -97,7 +97,7 @@ def test_sequential_decoding_past_the_first_layer_limit():
     T = 60                                         # capacity of the first layer is 32
     x, y = utterance(T)
     grads, _ = client_gradient(model, x.unsqueeze(1), y)
-    dec = SpanDecoder(model, grads)
+    dec = SpanDecoder(model, grads, layers=("fc2", "fc3", "lstm"))     # 60 frames need the wider LSTM span at this toy width
     inits = torch.randn(12, 3, 8) * 3
     X, info = dec.decode(inits=inits, last_inits=inits)
     assert info["T"] == T

@@ -29,7 +29,8 @@ for target in (150, 250, 500, 1000):
 json.dump(spec, open(os.path.join(out, "spectra.json"), "w"))
 ex = {}
 short = sorted(glob.glob(os.path.join(os.environ["OUT"], "e1/recon/*.pt")))
-long_ = sorted(glob.glob(os.path.join(os.environ["OUT"], "e2/recon/*.pt")), key=lambda p: -torch.load(p)["x"].shape[0])
+long_ = sorted(glob.glob(os.path.join(os.environ["OUT"], "e2b/recon/*.pt")), key=lambda p: -torch.load(p)["x"].shape[0])
+long_ = [p for p in long_ if 950 <= torch.load(p)["x"].shape[0] <= 1100] or long_
 for tag, p in (("short", short[7]), ("long", long_[0])):
     d = torch.load(p)
     ex[tag + "_x"], ex[tag + "_X"] = d["x"].numpy(), d["X"].numpy()

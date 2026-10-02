@@ -13,10 +13,21 @@ from .deep_attack import leaked_spans, LAYER_INPUT, _double_front, span_objectiv
 
 
 class SpanDecoder:
-    def __init__(self, model, grads, layers=("fc2", "fc3", "lstm"), T=None, codebook=None):
-        """codebook: optional (N, F) frames of public speech, used to pick restart points."""
+    def __init__(self, model, grads, layers="auto", T=None, codebook=None, lstm_from=1850):
+        """codebook: optional (N, F) frames of public speech, used to pick restart points.
+
+        layers="auto" uses the fc2 and fc3 spans, which are clean down to the float32 floor.
+        The LSTM-input span holds twice as many frames but its weakest directions sit at the
+        noise level on trained weights, so it is added only when the utterance is too long
+        for the other two (more than `lstm_from` frames).
+        """
         self.codebook = None if codebook is None else codebook.double().to(next(model.parameters()).device)
-        self.bases, self.T, self.svals = leaked_spans(grads, layers, T)
+        if layers == "auto":
+            self.bases, self.T, self.svals = leaked_spans(grads, ("fc2", "fc3"), T)
+            if self.T > lstm_from:
+                self.bases, self.T, self.svals = leaked_spans(grads, ("fc2", "fc3", "lstm"), T)
+        else:
+            self.bases, self.T, self.svals = leaked_spans(grads, layers, T)
         self.front = _double_front(model)
         self.F, self.c = model.n_feat, model.n_context
         self.K = 2 * self.c + 1
