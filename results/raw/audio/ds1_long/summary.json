@@ -1,0 +1,16 @@
+{
+ "n": 57,
+ "whisper": "small.en",
+ "wer": {
+  "orig": 0.034482758620689655,
+  "true": 0.04195402298850575,
+  "rec": 0.04195402298850575
+ },
+ "spk_sim_rec_mean": 0.8313440147199129,
+ "spk_sim_true_mean": 0.8313576735948262,
+ "speaker_id_top1": 1.0,
+ "speaker_id_top1_original_audio": 1.0,
+ "enrolled_speakers": 40,
+ "enrol_utterances": 5,
+ "n_scored": 57
+}

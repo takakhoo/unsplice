@@ -1,0 +1,420 @@
+{"P": 78, "T": 78, "rel": 1.2126423975454435e-07, "mae": 9.146957312875078e-07, "ambiguity": 4.270030574003249e-05, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 0}
+{"P": 78, "T": 78, "rel": 9.921286260740655e-08, "mae": 8.164088399443804e-07, "ambiguity": 4.9696867510333385e-05, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 1}
+{"P": 78, "T": 78, "rel": 9.354427040857273e-08, "mae": 7.36623264869245e-07, "ambiguity": 4.466748390969506e-05, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 2}
+{"P": 78, "T": 78, "rel": 7.778728355226797e-08, "mae": 6.045529886063886e-07, "ambiguity": 4.417456662039885e-05, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 3}
+{"P": 78, "T": 78, "rel": 7.768074393744708e-08, "mae": 5.619991485449375e-07, "ambiguity": 3.886486012309862e-05, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 4}
+{"P": 156, "T": 156, "rel": 9.982767193390003e-07, "mae": 7.742507679479544e-06, "ambiguity": 5.584273259634598e-05, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 0}
+{"P": 156, "T": 156, "rel": 1.1639912548877655e-06, "mae": 9.070898021707146e-06, "ambiguity": 5.4173294818116715e-05, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 1}
+{"P": 156, "T": 156, "rel": 9.927052054861115e-07, "mae": 8.538419402621587e-06, "ambiguity": 6.131524555259905e-05, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 2}
+{"P": 156, "T": 156, "rel": 1.4762637638326015e-06, "mae": 1.1850512187076661e-05, "ambiguity": 5.5190436238988325e-05, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 3}
+{"P": 156, "T": 156, "rel": 6.985377641195797e-07, "mae": 5.369099737112328e-06, "ambiguity": 5.26504324658961e-05, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 4}
+{"P": 234, "T": 234, "rel": 1.0628468886109127e-05, "mae": 8.062165960112639e-05, "ambiguity": 0.0003203196132228958, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 0}
+{"P": 234, "T": 234, "rel": 9.645047129386626e-06, "mae": 7.440524322357372e-05, "ambiguity": 0.000296235939998351, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 1}
+{"P": 234, "T": 234, "rel": 1.0614927520325471e-05, "mae": 8.693645775659878e-05, "ambiguity": 0.0002849963592924775, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 2}
+{"P": 234, "T": 234, "rel": 1.1767981245816535e-05, "mae": 9.451708241819442e-05, "ambiguity": 0.0002927100947433259, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 3}
+{"P": 234, "T": 234, "rel": 1.1119080943835239e-05, "mae": 8.345824192280503e-05, "ambiguity": 0.000319283744366737, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 4}
+{"P": 288, "T": 288, "rel": 3.9164826297278985e-05, "mae": 0.0002940771802096755, "ambiguity": 0.011498631618201029, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 0}
+{"P": 288, "T": 288, "rel": 5.435733893440651e-05, "mae": 0.0004202021004869564, "ambiguity": 0.007611989682309642, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 1}
+{"P": 288, "T": 288, "rel": 4.823206604066238e-05, "mae": 0.0004025871999706832, "ambiguity": 0.007591548043589007, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 2}
+{"P": 288, "T": 288, "rel": 3.0470345164988186e-05, "mae": 0.0002460155133742444, "ambiguity": 0.006961519256454675, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 3}
+{"P": 288, "T": 288, "rel": 5.914421873007318e-05, "mae": 0.0004407920764245226, "ambiguity": 0.009387263379595685, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 4}
+{"P": 292, "T": 292, "rel": 0.00010782905641505359, "mae": 0.0008118487696034447, "ambiguity": 0.017873736209252932, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 0}
+{"P": 292, "T": 292, "rel": 4.694182199973012e-05, "mae": 0.00036677314348906723, "ambiguity": 0.012583642220211598, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 1}
+{"P": 292, "T": 292, "rel": 5.2809196576733693e-05, "mae": 0.00043880422422803403, "ambiguity": 0.01234684488209327, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 2}
+{"P": 292, "T": 292, "rel": 6.923560482912568e-05, "mae": 0.0005553719628972932, "ambiguity": 0.008193600701491938, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 3}
+{"P": 292, "T": 292, "rel": 4.8828016777166205e-05, "mae": 0.0003654966453158891, "ambiguity": 0.016900054005778358, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 4}
+{"P": 296, "T": 296, "rel": 6.490378107026634e-05, "mae": 0.0004930317777368707, "ambiguity": 0.027150861522080207, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 0}
+{"P": 296, "T": 296, "rel": 3.910710996491747e-05, "mae": 0.00030306988683031133, "ambiguity": 0.018617413544061386, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 1}
+{"P": 296, "T": 296, "rel": 7.073840142576252e-05, "mae": 0.000585044598534686, "ambiguity": 0.022386167176669382, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 2}
+{"P": 296, "T": 296, "rel": 9.186488914560462e-05, "mae": 0.0007339901573964635, "ambiguity": 0.013007433855568282, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 3}
+{"P": 296, "T": 296, "rel": 0.00010833926037334313, "mae": 0.0008071771450490129, "ambiguity": 0.03205569306936825, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 4}
+{"P": 300, "T": 300, "rel": 7.287787484263642e-05, "mae": 0.0005588205183798685, "ambiguity": 0.035991693463057216, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 0}
+{"P": 300, "T": 300, "rel": 9.742670142090228e-05, "mae": 0.0007591219995088301, "ambiguity": 0.035943544369533426, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 1}
+{"P": 300, "T": 300, "rel": 5.2390602459833904e-05, "mae": 0.00043634539083376475, "ambiguity": 0.06291342634891622, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 2}
+{"P": 300, "T": 300, "rel": 6.0173616323427516e-05, "mae": 0.00047866121212188767, "ambiguity": 0.021027943212690095, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 3}
+{"P": 300, "T": 300, "rel": 0.00013379396559436057, "mae": 0.0009981709176258573, "ambiguity": 0.05943134373164612, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 4}
+{"P": 304, "T": 304, "rel": 0.0001673003608230461, "mae": 0.0012764573381435081, "ambiguity": 0.06819078298591807, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 0}
+{"P": 304, "T": 304, "rel": 7.844453640610116e-05, "mae": 0.0006091633114165529, "ambiguity": 0.046128490274107155, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 1}
+{"P": 304, "T": 304, "rel": 0.00017109673808694232, "mae": 0.0014102047089915913, "ambiguity": 0.08974220004972176, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 2}
+{"P": 304, "T": 304, "rel": 0.0001026348450244783, "mae": 0.00081773538142674, "ambiguity": 0.04681879097286282, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 3}
+{"P": 304, "T": 304, "rel": 8.549073062228259e-05, "mae": 0.000640051049256092, "ambiguity": 0.11185740626216005, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 4}
+{"P": 308, "T": 308, "rel": 0.00023555333449934535, "mae": 0.0018016930700343783, "ambiguity": 0.21652715487711427, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 0}
+{"P": 308, "T": 308, "rel": 0.00019919393468683454, "mae": 0.0015579735107113597, "ambiguity": 0.16167342822834985, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 1}
+{"P": 308, "T": 308, "rel": 0.00012874079724826466, "mae": 0.0010653906440580042, "ambiguity": 0.1339642440186878, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 2}
+{"P": 308, "T": 308, "rel": 0.0002619782846852391, "mae": 0.0020759242646889373, "ambiguity": 0.2399233075413273, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 3}
+{"P": 308, "T": 308, "rel": 9.354928737500527e-05, "mae": 0.0006933695614965927, "ambiguity": 0.16610546699979956, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 4}
+{"P": 309, "T": 309, "rel": 0.0002845473352096784, "mae": 0.0021564333944362937, "ambiguity": 0.25062349966661907, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 0}
+{"P": 309, "T": 309, "rel": 0.00021718379804764438, "mae": 0.0016754036858127397, "ambiguity": 0.29585850193269114, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 1}
+{"P": 309, "T": 309, "rel": 0.0002863212385651595, "mae": 0.0023549853584754876, "ambiguity": 0.26241031864564546, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 2}
+{"P": 309, "T": 309, "rel": 0.0001557120833966334, "mae": 0.001224594245743073, "ambiguity": 0.20976262974899623, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 3}
+{"P": 309, "T": 309, "rel": 0.0001918206555231093, "mae": 0.0014282236001252255, "ambiguity": 0.20258333296288278, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 4}
+{"P": 310, "T": 310, "rel": 0.0002825234141004636, "mae": 0.002104339891469741, "ambiguity": 0.2702036759570306, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 0}
+{"P": 310, "T": 310, "rel": 0.00037043378277701355, "mae": 0.0028098642957514602, "ambiguity": 0.29822342097714066, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 1}
+{"P": 310, "T": 310, "rel": 0.00014306212262303044, "mae": 0.001166951049588355, "ambiguity": 0.16873002625600372, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 2}
+{"P": 310, "T": 310, "rel": 0.00041817731809088045, "mae": 0.0032803456485598127, "ambiguity": 0.21795135211150835, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 3}
+{"P": 310, "T": 310, "rel": 0.00023403100817898299, "mae": 0.0017527131580955596, "ambiguity": 0.2491814917072425, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 4}
+{"P": 311, "T": 311, "rel": 0.0002715987965132061, "mae": 0.002034237211512402, "ambiguity": 0.31603618936819994, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 0}
+{"P": 311, "T": 311, "rel": 0.0005450284379315902, "mae": 0.004001860784443286, "ambiguity": 0.446058334525215, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 1}
+{"P": 311, "T": 311, "rel": 0.000516572924690375, "mae": 0.004133678464003458, "ambiguity": 0.356326286692306, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 2}
+{"P": 311, "T": 311, "rel": 0.0012560779125448606, "mae": 0.009731401203856998, "ambiguity": 0.4388645975574551, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 3}
+{"P": 311, "T": 311, "rel": 0.00030804011950402905, "mae": 0.002271061925239129, "ambiguity": 0.32677058007239057, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 4}
+{"P": 312, "T": 312, "rel": 0.0005645785581779914, "mae": 0.0042691167855857795, "ambiguity": 0.4512737418746374, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 0}
+{"P": 312, "T": 312, "rel": 0.039431834077397886, "mae": 0.3007009974151732, "ambiguity": 0.49890448637268436, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 1}
+{"P": 312, "T": 312, "rel": 0.0005119439408431789, "mae": 0.004246177165971151, "ambiguity": 0.3669325732698617, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 2}
+{"P": 312, "T": 312, "rel": 0.0007320160589701248, "mae": 0.005666098914481444, "ambiguity": 0.4147156303095044, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 3}
+{"P": 312, "T": 312, "rel": 0.0005625193457011982, "mae": 0.004144021648220821, "ambiguity": 0.4089706052167601, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 4}
+{"P": 313, "T": 313, "rel": 0.2866628357252481, "mae": 2.09676453940612, "ambiguity": 0.6404912033017097, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 0}
+{"P": 313, "T": 313, "rel": 0.1379066153677586, "mae": 1.0527254790523237, "ambiguity": 0.5450649092805387, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 1}
+{"P": 313, "T": 313, "rel": 0.05453009218597934, "mae": 0.4453632941823747, "ambiguity": 0.41324386404915586, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 2}
+{"P": 313, "T": 313, "rel": 0.09188501107602619, "mae": 0.7293736824336564, "ambiguity": 0.5559156365347803, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 3}
+{"P": 313, "T": 313, "rel": 0.12358799720524297, "mae": 0.9084159283088071, "ambiguity": 0.5852927748582961, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 4}
+{"P": 314, "T": 314, "rel": 0.6724780816620826, "mae": 4.87397140217891, "ambiguity": 0.25769962784689154, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 0}
+{"P": 314, "T": 314, "rel": 0.7196467805053964, "mae": 5.354268914655066, "ambiguity": 0.24896699704073197, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 1}
+{"P": 314, "T": 314, "rel": 0.6471890865626999, "mae": 5.1414743726862, "ambiguity": 0.27699814786613325, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 2}
+{"P": 314, "T": 314, "rel": 0.6155616137023773, "mae": 4.7212667746579084, "ambiguity": 0.29903072877488013, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 3}
+{"P": 314, "T": 314, "rel": 0.7252644532476551, "mae": 5.242627478489037, "ambiguity": 0.3354679115895974, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 4}
+{"P": 315, "T": 315, "rel": 0.8031726165625691, "mae": 5.903869713376395, "ambiguity": 0.25772685179947535, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 0}
+{"P": 315, "T": 315, "rel": 0.811124800971687, "mae": 6.024742132498232, "ambiguity": 0.2013025598399732, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 1}
+{"P": 315, "T": 315, "rel": 0.7794010769545243, "mae": 6.143776460313504, "ambiguity": 0.20415504494553124, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 2}
+{"P": 315, "T": 315, "rel": 0.7449741070042081, "mae": 5.674592633678233, "ambiguity": 0.19924589671185025, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 3}
+{"P": 315, "T": 315, "rel": 0.7963733481362661, "mae": 5.779060452021606, "ambiguity": 0.2314757894123602, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 4}
+{"P": 316, "T": 316, "rel": 0.8540950701122839, "mae": 6.309596810975949, "ambiguity": 0.23866850468996342, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 0}
+{"P": 316, "T": 316, "rel": 0.8427368858770508, "mae": 6.278284865792001, "ambiguity": 0.22275839605905962, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 1}
+{"P": 316, "T": 316, "rel": 0.8348231895465181, "mae": 6.5352200227409964, "ambiguity": 0.22185819234075163, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 2}
+{"P": 316, "T": 316, "rel": 0.8257829009281034, "mae": 6.31850979010712, "ambiguity": 0.22488878703301315, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 3}
+{"P": 316, "T": 316, "rel": 0.8765974721566789, "mae": 6.339782431315153, "ambiguity": 0.23596459081709004, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 4}
+{"P": 320, "T": 320, "rel": 0.896298389882865, "mae": 6.605778779681679, "ambiguity": 0.3791026284236323, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 0}
+{"P": 320, "T": 320, "rel": 0.903707815131538, "mae": 6.74644897605694, "ambiguity": 0.3348385378937838, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 1}
+{"P": 320, "T": 320, "rel": 0.8987000265901107, "mae": 7.009067244079876, "ambiguity": 0.3287498217820118, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 2}
+{"P": 320, "T": 320, "rel": 0.877581932048735, "mae": 6.7083794440112285, "ambiguity": 0.3451126012957855, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 3}
+{"P": 320, "T": 320, "rel": 0.9394227170264637, "mae": 6.711613405058559, "ambiguity": 0.35366672126210635, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 4}
+{"P": 328, "T": 328, "rel": 0.9513400336993421, "mae": 7.025860115543034, "ambiguity": 0.47752898361863, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 0}
+{"P": 328, "T": 328, "rel": 0.9627850782837739, "mae": 7.313779416291956, "ambiguity": 0.47175593997733456, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 1}
+{"P": 328, "T": 328, "rel": 0.9546577179955782, "mae": 7.829051527367666, "ambiguity": 0.5497276772622478, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 2}
+{"P": 328, "T": 328, "rel": 0.9445857139388846, "mae": 7.459585279792504, "ambiguity": 0.5748776354971278, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 3}
+{"P": 328, "T": 328, "rel": 0.9669290931426869, "mae": 7.058792527884385, "ambiguity": 0.4848073581525456, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 4}
+{"P": 336, "T": 336, "rel": 0.9986345959445321, "mae": 7.5685205217775176, "ambiguity": 0.5629845960095838, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 0}
+{"P": 336, "T": 336, "rel": 0.9992596493316747, "mae": 7.6035001734096275, "ambiguity": 0.4884448677279554, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 1}
+{"P": 336, "T": 336, "rel": 0.9992684591966032, "mae": 8.147257918159234, "ambiguity": 0.45397651742879164, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 2}
+{"P": 336, "T": 336, "rel": 0.9981458303462196, "mae": 7.761502696486102, "ambiguity": 0.5708235285130556, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 3}
+{"P": 336, "T": 336, "rel": 0.998835439363676, "mae": 7.383919524350247, "ambiguity": 0.5475551695938253, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 4}
+{"P": 344, "T": 344, "rel": 0.9998779340664384, "mae": 7.526388185236899, "ambiguity": 0.3783218458618344, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 0}
+{"P": 344, "T": 344, "rel": 0.9996012207753363, "mae": 7.526617626238204, "ambiguity": 0.4505917329460237, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 1}
+{"P": 344, "T": 344, "rel": 0.9999024924438102, "mae": 8.09058370152569, "ambiguity": 0.32232089377422807, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 2}
+{"P": 344, "T": 344, "rel": 0.9996701562981193, "mae": 7.649332135906231, "ambiguity": 0.3730093227078884, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 3}
+{"P": 344, "T": 344, "rel": 0.9998615539620617, "mae": 7.345416256618455, "ambiguity": 0.3672084645609158, "config": "DeepSpeech-1, context 6 (k=13, s=1, F=26)", "capacity": 312, "rep": 4}
+{"P": 117, "T": 117, "rel": 1.0362147480580113e-07, "mae": 8.156663845165203e-07, "ambiguity": 6.433402384748047e-05, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 0}
+{"P": 117, "T": 117, "rel": 1.6668034925061146e-07, "mae": 1.3316454217650245e-06, "ambiguity": 6.669389874088816e-05, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 1}
+{"P": 117, "T": 117, "rel": 1.0950126712560355e-07, "mae": 9.178323069216768e-07, "ambiguity": 7.330473425027415e-05, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 2}
+{"P": 117, "T": 117, "rel": 1.519489192008526e-07, "mae": 1.2096266311834614e-06, "ambiguity": 6.718015673260871e-05, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 3}
+{"P": 117, "T": 117, "rel": 1.387200338575388e-07, "mae": 1.0555752888739578e-06, "ambiguity": 6.227214985571256e-05, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 4}
+{"P": 234, "T": 234, "rel": 8.78863610712857e-07, "mae": 6.795676616902171e-06, "ambiguity": 8.05329650310257e-05, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 0}
+{"P": 234, "T": 234, "rel": 1.4385923067267987e-06, "mae": 1.1231559566872938e-05, "ambiguity": 7.590799085740358e-05, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 1}
+{"P": 234, "T": 234, "rel": 1.80974793901667e-06, "mae": 1.4970222682888482e-05, "ambiguity": 8.446293352969336e-05, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 2}
+{"P": 234, "T": 234, "rel": 1.2617810623998335e-06, "mae": 1.0140918160519202e-05, "ambiguity": 7.790582551235608e-05, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 3}
+{"P": 234, "T": 234, "rel": 1.163295755304924e-06, "mae": 8.570547061637148e-06, "ambiguity": 7.347707575376631e-05, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 4}
+{"P": 351, "T": 351, "rel": 1.467119825420608e-05, "mae": 0.00011103855025920488, "ambiguity": 0.0004135451948283752, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 0}
+{"P": 351, "T": 351, "rel": 1.627653738222469e-05, "mae": 0.00012454021352364958, "ambiguity": 0.00040460435089737233, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 1}
+{"P": 351, "T": 351, "rel": 1.0972390877243283e-05, "mae": 9.130463694106114e-05, "ambiguity": 0.00042246834422810393, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 2}
+{"P": 351, "T": 351, "rel": 1.4046019745410297e-05, "mae": 0.00011013311302601425, "ambiguity": 0.00042337581345039464, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 3}
+{"P": 351, "T": 351, "rel": 9.790771137634286e-06, "mae": 7.442300894894583e-05, "ambiguity": 0.00043448598490872703, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 4}
+{"P": 444, "T": 444, "rel": 0.0001651174775401035, "mae": 0.0012769726454420662, "ambiguity": 0.03590861013470112, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 0}
+{"P": 444, "T": 444, "rel": 0.00015369311789006413, "mae": 0.0011659488277517803, "ambiguity": 0.030975853627273838, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 1}
+{"P": 444, "T": 444, "rel": 9.498863126829602e-05, "mae": 0.0007755805295828272, "ambiguity": 0.027605609309501074, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 2}
+{"P": 444, "T": 444, "rel": 0.00012132543471818786, "mae": 0.0009637262426416388, "ambiguity": 0.04011875231098032, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 3}
+{"P": 444, "T": 444, "rel": 0.00010026683360505779, "mae": 0.0007620632933586686, "ambiguity": 0.043042916026390286, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 4}
+{"P": 448, "T": 448, "rel": 0.00013431693404851433, "mae": 0.0010404064681722206, "ambiguity": 0.05687043992162635, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 0}
+{"P": 448, "T": 448, "rel": 0.00017029576370522, "mae": 0.0012873808356326064, "ambiguity": 0.046105066455944504, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 1}
+{"P": 448, "T": 448, "rel": 0.0001986326725586347, "mae": 0.0016174668509266665, "ambiguity": 0.0523702021521931, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 2}
+{"P": 448, "T": 448, "rel": 0.0001767434603596073, "mae": 0.0013898234898556423, "ambiguity": 0.062301046924404066, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 3}
+{"P": 448, "T": 448, "rel": 0.00017254882765389506, "mae": 0.0013000376114032475, "ambiguity": 0.06185094221539746, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 4}
+{"P": 452, "T": 452, "rel": 0.00031237150884053875, "mae": 0.002402297917816619, "ambiguity": 0.0895439996866219, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 0}
+{"P": 452, "T": 452, "rel": 0.00017224091110148865, "mae": 0.0013086263130604092, "ambiguity": 0.0779184290672067, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 1}
+{"P": 452, "T": 452, "rel": 0.00022196312487969994, "mae": 0.001794725848327778, "ambiguity": 0.07894350582247012, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 2}
+{"P": 452, "T": 452, "rel": 0.00035540764839775294, "mae": 0.0028203586342978684, "ambiguity": 0.08855786340114419, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 3}
+{"P": 452, "T": 452, "rel": 0.00020424412084678878, "mae": 0.001545777413778914, "ambiguity": 0.08894607360001706, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 4}
+{"P": 456, "T": 456, "rel": 0.00042627269212730035, "mae": 0.0032685788487235336, "ambiguity": 0.1463105064158734, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 0}
+{"P": 456, "T": 456, "rel": 0.00018730129036447895, "mae": 0.0014017405049322998, "ambiguity": 0.11615798553104462, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 1}
+{"P": 456, "T": 456, "rel": 0.00017469011124126825, "mae": 0.0014224258828484956, "ambiguity": 0.10737761191091061, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 2}
+{"P": 456, "T": 456, "rel": 0.0002452948963549473, "mae": 0.001923407545005887, "ambiguity": 0.12722414907251506, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 3}
+{"P": 456, "T": 456, "rel": 0.0001942201491563282, "mae": 0.0014445168100093555, "ambiguity": 0.14937319157339587, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 4}
+{"P": 460, "T": 460, "rel": 0.0003650192274750606, "mae": 0.002769876219542063, "ambiguity": 0.23060767027588153, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 0}
+{"P": 460, "T": 460, "rel": 0.00027287337230380077, "mae": 0.0020427194412220686, "ambiguity": 0.16720497318717195, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 1}
+{"P": 460, "T": 460, "rel": 0.0005326145249092561, "mae": 0.004289952568377409, "ambiguity": 0.18735386018389036, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 2}
+{"P": 460, "T": 460, "rel": 0.0002565916330363263, "mae": 0.0020262744252231503, "ambiguity": 0.15315677405359726, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 3}
+{"P": 460, "T": 460, "rel": 0.0005208478396062552, "mae": 0.0038762164628218495, "ambiguity": 0.3025659539213444, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 4}
+{"P": 464, "T": 464, "rel": 0.0005172502540024669, "mae": 0.003951717934075587, "ambiguity": 0.3041213748823588, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 0}
+{"P": 464, "T": 464, "rel": 0.0006294911563211819, "mae": 0.004719596285755153, "ambiguity": 0.25925866227711764, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 1}
+{"P": 464, "T": 464, "rel": 0.0006502349945662705, "mae": 0.005232448840930483, "ambiguity": 0.3495869797055924, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 2}
+{"P": 464, "T": 464, "rel": 0.00036626923730966385, "mae": 0.0028825847064452965, "ambiguity": 0.1997970664810913, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 3}
+{"P": 464, "T": 464, "rel": 0.0007250835291018027, "mae": 0.005335198017280501, "ambiguity": 0.38195197981348944, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 4}
+{"P": 465, "T": 465, "rel": 0.0008161739854395607, "mae": 0.006093756481879545, "ambiguity": 0.40465790347872, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 0}
+{"P": 465, "T": 465, "rel": 0.0005798143396340494, "mae": 0.004275993217467871, "ambiguity": 0.36207666901596736, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 1}
+{"P": 465, "T": 465, "rel": 0.0008806391779912123, "mae": 0.006966934859124918, "ambiguity": 0.4165627751266952, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 2}
+{"P": 465, "T": 465, "rel": 0.0003949474892789389, "mae": 0.0030860997088698315, "ambiguity": 0.25651306634388943, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 3}
+{"P": 465, "T": 465, "rel": 0.0010325794945681005, "mae": 0.007575379693621036, "ambiguity": 0.47135744774881216, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 4}
+{"P": 466, "T": 466, "rel": 0.0007512901805803384, "mae": 0.005563585180309386, "ambiguity": 0.4178821361474458, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 0}
+{"P": 466, "T": 466, "rel": 0.0006971255054073573, "mae": 0.005169614819254066, "ambiguity": 0.3794009334142608, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 1}
+{"P": 466, "T": 466, "rel": 0.0015646902437562345, "mae": 0.01249212831912991, "ambiguity": 0.4868771304612476, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 2}
+{"P": 466, "T": 466, "rel": 0.0009878892229226769, "mae": 0.007723542301863767, "ambiguity": 0.36226554672432865, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 3}
+{"P": 466, "T": 466, "rel": 0.0013896579145774271, "mae": 0.01018853564784089, "ambiguity": 0.4995041877667518, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 4}
+{"P": 467, "T": 467, "rel": 0.0008340558935390001, "mae": 0.00631831821603194, "ambiguity": 0.4195163130629595, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 0}
+{"P": 467, "T": 467, "rel": 0.0006789898618930971, "mae": 0.005064511273200807, "ambiguity": 0.34363605489535487, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 1}
+{"P": 467, "T": 467, "rel": 0.007896469434506, "mae": 0.06254371060265937, "ambiguity": 0.626993146023225, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 2}
+{"P": 467, "T": 467, "rel": 0.0007815381581992602, "mae": 0.006067564790652293, "ambiguity": 0.40101573414520225, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 3}
+{"P": 467, "T": 467, "rel": 0.0011638230459357166, "mae": 0.008368493848037365, "ambiguity": 0.4832929837557036, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 4}
+{"P": 468, "T": 468, "rel": 0.01292373658217576, "mae": 0.09572103574260443, "ambiguity": 0.5835277974936977, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 0}
+{"P": 468, "T": 468, "rel": 0.001738326714230371, "mae": 0.012805401519311125, "ambiguity": 0.5172257658337169, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 1}
+{"P": 468, "T": 468, "rel": 0.03160199232375388, "mae": 0.24922996438873649, "ambiguity": 0.6676862804305246, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 2}
+{"P": 468, "T": 468, "rel": 0.007149474095957089, "mae": 0.0550440727425247, "ambiguity": 0.5819699873086843, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 3}
+{"P": 468, "T": 468, "rel": 0.006910912804567466, "mae": 0.049407238733386344, "ambiguity": 0.6728408319568061, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 4}
+{"P": 469, "T": 469, "rel": 0.13488915340918284, "mae": 1.0098275410439697, "ambiguity": 0.5728433230638801, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 0}
+{"P": 469, "T": 469, "rel": 0.12828705115856026, "mae": 0.9500040000405273, "ambiguity": 0.5734545348920396, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 1}
+{"P": 469, "T": 469, "rel": 0.11953115556767162, "mae": 0.947848608255964, "ambiguity": 0.6637582589645492, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 2}
+{"P": 469, "T": 469, "rel": 0.16942078685685383, "mae": 1.3075054070122871, "ambiguity": 0.6392899618144294, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 3}
+{"P": 469, "T": 469, "rel": 0.16796622658211627, "mae": 1.233650698321851, "ambiguity": 0.6994648344140952, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 4}
+{"P": 470, "T": 470, "rel": 0.7214930880131322, "mae": 5.351228268316334, "ambiguity": 0.2618773138811373, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 0}
+{"P": 470, "T": 470, "rel": 0.7075572188263869, "mae": 5.096006503506826, "ambiguity": 0.4983969503065442, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 1}
+{"P": 470, "T": 470, "rel": 0.6713682450650104, "mae": 5.314906188961668, "ambiguity": 0.4063800567542815, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 2}
+{"P": 470, "T": 470, "rel": 0.7307719874647204, "mae": 5.500055313403919, "ambiguity": 0.2627304006424564, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 3}
+{"P": 470, "T": 470, "rel": 0.7305195806545364, "mae": 5.297777431394238, "ambiguity": 0.2581680081830573, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 4}
+{"P": 471, "T": 471, "rel": 0.8042749728524808, "mae": 5.951936776483284, "ambiguity": 0.23192810712558312, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 0}
+{"P": 471, "T": 471, "rel": 0.7944785695126341, "mae": 5.698203433986062, "ambiguity": 0.23058162273729368, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 1}
+{"P": 471, "T": 471, "rel": 0.780200264187335, "mae": 6.077361429297682, "ambiguity": 0.25587214978583395, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 2}
+{"P": 471, "T": 471, "rel": 0.817773901521796, "mae": 6.111220683558325, "ambiguity": 0.2226479079559245, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 3}
+{"P": 471, "T": 471, "rel": 0.8028464073178231, "mae": 5.806711973682506, "ambiguity": 0.22174080644293914, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 4}
+{"P": 472, "T": 472, "rel": 0.8417592598919716, "mae": 6.23630750864847, "ambiguity": 0.26617601377692507, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 0}
+{"P": 472, "T": 472, "rel": 0.8539231685993999, "mae": 6.135404219421781, "ambiguity": 0.24359722218110555, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 1}
+{"P": 472, "T": 472, "rel": 0.8308377849971178, "mae": 6.4186611791110915, "ambiguity": 0.28640065083588856, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 2}
+{"P": 472, "T": 472, "rel": 0.8518392925823904, "mae": 6.344113410867573, "ambiguity": 0.24530680684005574, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 3}
+{"P": 472, "T": 472, "rel": 0.8428975070268905, "mae": 6.113994843190515, "ambiguity": 0.22446647876202955, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 4}
+{"P": 476, "T": 476, "rel": 0.909696956559702, "mae": 6.76256317737321, "ambiguity": 0.3989420288681792, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 0}
+{"P": 476, "T": 476, "rel": 0.9147243606323354, "mae": 6.596210465831334, "ambiguity": 0.42391429042154744, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 1}
+{"P": 476, "T": 476, "rel": 0.9110280499070215, "mae": 7.00225088764467, "ambiguity": 0.3942651647153938, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 2}
+{"P": 476, "T": 476, "rel": 0.8901346727076925, "mae": 6.7020654054068345, "ambiguity": 0.41163194106626927, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 3}
+{"P": 476, "T": 476, "rel": 0.910029193715194, "mae": 6.538177202051449, "ambiguity": 0.36827315853416315, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 4}
+{"P": 484, "T": 484, "rel": 0.9944135229335538, "mae": 7.670767190607224, "ambiguity": 0.49952190334144986, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 0}
+{"P": 484, "T": 484, "rel": 0.9825727696046005, "mae": 7.324047950539809, "ambiguity": 0.5602528488220695, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 1}
+{"P": 484, "T": 484, "rel": 0.9776827392635963, "mae": 7.653837765567958, "ambiguity": 0.4200215407459321, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 2}
+{"P": 484, "T": 484, "rel": 0.9698856840529698, "mae": 7.369126315194245, "ambiguity": 0.47445000614886623, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 3}
+{"P": 484, "T": 484, "rel": 0.9752778363749368, "mae": 7.058140241202331, "ambiguity": 0.4555344092436599, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 4}
+{"P": 492, "T": 492, "rel": 0.999892603844665, "mae": 7.605336993802321, "ambiguity": 0.5020343544166433, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 0}
+{"P": 492, "T": 492, "rel": 0.9998563386031428, "mae": 7.369398158470015, "ambiguity": 0.4903976493062995, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 1}
+{"P": 492, "T": 492, "rel": 0.9967639253508409, "mae": 8.001851836812428, "ambiguity": 0.5448731508454663, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 2}
+{"P": 492, "T": 492, "rel": 0.9994398867539962, "mae": 7.6656869349088925, "ambiguity": 0.6124144456234643, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 3}
+{"P": 492, "T": 492, "rel": 0.9998208485279279, "mae": 7.336078042897003, "ambiguity": 0.6369162037207894, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 4}
+{"P": 500, "T": 500, "rel": 0.9995017679392934, "mae": 7.704867103351775, "ambiguity": 0.41516410460111325, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 0}
+{"P": 500, "T": 500, "rel": 0.9994949473050956, "mae": 7.419034419651158, "ambiguity": 0.3784411736237062, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 1}
+{"P": 500, "T": 500, "rel": 0.9999002104490661, "mae": 7.916548631743378, "ambiguity": 0.37657896023698806, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 2}
+{"P": 500, "T": 500, "rel": 0.9988065032129093, "mae": 7.687882757481177, "ambiguity": 0.38246194553142476, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 3}
+{"P": 500, "T": 500, "rel": 0.999995245754794, "mae": 7.3516662050727986, "ambiguity": 0.3446835559010976, "config": "DeepSpeech-1, context 9 (k=19, s=1, F=26)", "capacity": 468, "rep": 4}
+{"P": 80, "T": 238, "rel": 8.937611588084886e-07, "mae": 6.608277591381972e-07, "ambiguity": 0.00013491281543194858, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 0}
+{"P": 80, "T": 238, "rel": 6.735532101265927e-07, "mae": 5.090869317808548e-07, "ambiguity": 0.00010927503663463566, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 1}
+{"P": 80, "T": 238, "rel": 6.994050702423625e-07, "mae": 5.172278120309786e-07, "ambiguity": 0.00010274598123376383, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 2}
+{"P": 80, "T": 238, "rel": 7.847295848699996e-07, "mae": 5.917329097457022e-07, "ambiguity": 7.245999364309503e-05, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 3}
+{"P": 80, "T": 238, "rel": 6.320807455351237e-07, "mae": 4.804184210512306e-07, "ambiguity": 0.00014296709222249145, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 4}
+{"P": 160, "T": 478, "rel": 6.417674516180139e-06, "mae": 4.840549645122972e-06, "ambiguity": 0.0011031756800635281, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 0}
+{"P": 160, "T": 478, "rel": 5.780890299700404e-06, "mae": 4.349126259168148e-06, "ambiguity": 0.0009084594303870279, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 1}
+{"P": 160, "T": 478, "rel": 5.768791586699752e-06, "mae": 4.33698167386406e-06, "ambiguity": 0.0010412275188352725, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 2}
+{"P": 160, "T": 478, "rel": 5.5806838343027035e-06, "mae": 4.185078513857302e-06, "ambiguity": 0.0006969669144404387, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 3}
+{"P": 160, "T": 478, "rel": 7.528991651300096e-06, "mae": 5.8118255024010315e-06, "ambiguity": 0.002310549382231767, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 4}
+{"P": 240, "T": 718, "rel": 3.8088242421013465e-05, "mae": 2.8719447457141296e-05, "ambiguity": 0.007249402485494706, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 0}
+{"P": 240, "T": 718, "rel": 2.7748909370608254e-05, "mae": 2.1312915333877198e-05, "ambiguity": 0.006276031111786423, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 1}
+{"P": 240, "T": 718, "rel": 3.486453696374398e-05, "mae": 2.6820420687132557e-05, "ambiguity": 0.007543190822502743, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 2}
+{"P": 240, "T": 718, "rel": 3.331499702919722e-05, "mae": 2.5727204651467572e-05, "ambiguity": 0.004813726963382602, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 3}
+{"P": 240, "T": 718, "rel": 3.700274782155435e-05, "mae": 2.786866764176677e-05, "ambiguity": 0.012145567538603543, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 4}
+{"P": 296, "T": 886, "rel": 0.00012405243364221473, "mae": 9.654268937478355e-05, "ambiguity": 0.06867079789617646, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 0}
+{"P": 296, "T": 886, "rel": 0.0001580915407439493, "mae": 0.00012121589514554338, "ambiguity": 0.07400855225285255, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 1}
+{"P": 296, "T": 886, "rel": 0.00015054585624096507, "mae": 0.00011810624524645125, "ambiguity": 0.050143129280179936, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 2}
+{"P": 296, "T": 886, "rel": 0.00013176742089522576, "mae": 0.00010285690076897378, "ambiguity": 0.049029494314491426, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 3}
+{"P": 296, "T": 886, "rel": 0.0001443929559216983, "mae": 0.00011314103826255866, "ambiguity": 0.057964985622559737, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 4}
+{"P": 300, "T": 898, "rel": 0.00015296260892265522, "mae": 0.00011962148690221058, "ambiguity": 0.08963128491813235, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 0}
+{"P": 300, "T": 898, "rel": 0.0001637105547441578, "mae": 0.00012508686148905346, "ambiguity": 0.10042607883208526, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 1}
+{"P": 300, "T": 898, "rel": 0.0001507346099349278, "mae": 0.00011770798289440713, "ambiguity": 0.06318864893911418, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 2}
+{"P": 300, "T": 898, "rel": 0.00014011147894399964, "mae": 0.00011059624208687446, "ambiguity": 0.06114996547819395, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 3}
+{"P": 300, "T": 898, "rel": 0.00021365338547997241, "mae": 0.00016547981976252187, "ambiguity": 0.07076342350948328, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 4}
+{"P": 304, "T": 910, "rel": 0.00019090235655827868, "mae": 0.0001491873477178114, "ambiguity": 0.10545482666448439, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 0}
+{"P": 304, "T": 910, "rel": 0.00023692351800009775, "mae": 0.0001824663449199576, "ambiguity": 0.12972025579336913, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 1}
+{"P": 304, "T": 910, "rel": 0.00014417899892835536, "mae": 0.0001129656065801304, "ambiguity": 0.07453022900727466, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 2}
+{"P": 304, "T": 910, "rel": 0.00021447678919660714, "mae": 0.00016775304621088078, "ambiguity": 0.0781257366093188, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 3}
+{"P": 304, "T": 910, "rel": 0.0001593037425869779, "mae": 0.00012295082714170713, "ambiguity": 0.08632307127882365, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 4}
+{"P": 308, "T": 922, "rel": 0.00019970217875778023, "mae": 0.00015763912669587233, "ambiguity": 0.15857024317145785, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 0}
+{"P": 308, "T": 922, "rel": 0.00022187195658577072, "mae": 0.00017389383365062075, "ambiguity": 0.16534228149320385, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 1}
+{"P": 308, "T": 922, "rel": 0.00020191165226927482, "mae": 0.00015807103692193876, "ambiguity": 0.09512380975964044, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 2}
+{"P": 308, "T": 922, "rel": 0.00022682826288156294, "mae": 0.00017835594092778634, "ambiguity": 0.1168341075502428, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 3}
+{"P": 308, "T": 922, "rel": 0.00024089017917015758, "mae": 0.00018950588467202275, "ambiguity": 0.11151027033741676, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 4}
+{"P": 312, "T": 934, "rel": 0.00035135915700986164, "mae": 0.0002775463079332056, "ambiguity": 0.2066823902895873, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 0}
+{"P": 312, "T": 934, "rel": 0.0003433464740631242, "mae": 0.00026798272772925354, "ambiguity": 0.20566784541572417, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 1}
+{"P": 312, "T": 934, "rel": 0.0002958881946064397, "mae": 0.0002296510153362262, "ambiguity": 0.13218097384105776, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 2}
+{"P": 312, "T": 934, "rel": 0.0003534682726777058, "mae": 0.00027394864941707094, "ambiguity": 0.15730470387193984, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 3}
+{"P": 312, "T": 934, "rel": 0.0003761793764851041, "mae": 0.00028999617333852967, "ambiguity": 0.16677467353790526, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 4}
+{"P": 316, "T": 946, "rel": 0.0004437350707047255, "mae": 0.000343860792683962, "ambiguity": 0.3037971613865152, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 0}
+{"P": 316, "T": 946, "rel": 0.0005202144069140687, "mae": 0.0004076624895761065, "ambiguity": 0.35784054693581685, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 1}
+{"P": 316, "T": 946, "rel": 0.0003820568308505566, "mae": 0.00029782732373137127, "ambiguity": 0.19794722264318146, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 2}
+{"P": 316, "T": 946, "rel": 0.00044001683358633976, "mae": 0.0003448323130398485, "ambiguity": 0.25634815674745703, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 3}
+{"P": 316, "T": 946, "rel": 0.0005774328104562739, "mae": 0.0004456623045326631, "ambiguity": 0.2598105377130296, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 4}
+{"P": 317, "T": 949, "rel": 0.0004942451320988112, "mae": 0.00038326264449139194, "ambiguity": 0.3627808167178687, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 0}
+{"P": 317, "T": 949, "rel": 0.0005443248128198364, "mae": 0.0004271469676828915, "ambiguity": 0.3827931044116929, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 1}
+{"P": 317, "T": 949, "rel": 0.0005259608752242561, "mae": 0.0004108021149662781, "ambiguity": 0.23190691607453345, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 2}
+{"P": 317, "T": 949, "rel": 0.0005522827325837373, "mae": 0.0004318255836693489, "ambiguity": 0.30351308271628374, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 3}
+{"P": 317, "T": 949, "rel": 0.0004889696442635156, "mae": 0.0003802895285228005, "ambiguity": 0.26082765494250704, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 4}
+{"P": 318, "T": 952, "rel": 0.000568324521072806, "mae": 0.00044093632536809624, "ambiguity": 0.3991207096802174, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 0}
+{"P": 318, "T": 952, "rel": 0.0007177418542180139, "mae": 0.000566593814168779, "ambiguity": 0.42192795856886817, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 1}
+{"P": 318, "T": 952, "rel": 0.0005405011103484579, "mae": 0.00042331532087201966, "ambiguity": 0.27727006024307793, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 2}
+{"P": 318, "T": 952, "rel": 0.0006044323397788958, "mae": 0.00047442107286901566, "ambiguity": 0.32646664732831815, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 3}
+{"P": 318, "T": 952, "rel": 0.0009341336790399063, "mae": 0.0007369154105639529, "ambiguity": 0.3891811043600686, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 4}
+{"P": 319, "T": 955, "rel": 0.0008402260197778141, "mae": 0.0006597229626394957, "ambiguity": 0.49036954936284244, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 0}
+{"P": 319, "T": 955, "rel": 0.0009049130071327124, "mae": 0.0007033743897574656, "ambiguity": 0.5089048798372645, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 1}
+{"P": 319, "T": 955, "rel": 0.0006817997986288853, "mae": 0.0005389124549280262, "ambiguity": 0.35434874344188577, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 2}
+{"P": 319, "T": 955, "rel": 0.0009406016540014246, "mae": 0.0007404434285709585, "ambiguity": 0.37265499123346174, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 3}
+{"P": 319, "T": 955, "rel": 0.0006554232625532912, "mae": 0.0005156836172787338, "ambiguity": 0.33973620471988225, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 4}
+{"P": 320, "T": 958, "rel": 0.0011688712806778808, "mae": 0.0009231077348581259, "ambiguity": 0.5412508548883923, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 0}
+{"P": 320, "T": 958, "rel": 0.0010302053160938431, "mae": 0.0007995800667417938, "ambiguity": 0.5663752858923248, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 1}
+{"P": 320, "T": 958, "rel": 0.0023258840871437673, "mae": 0.0018125879112628129, "ambiguity": 0.5703723161174178, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 2}
+{"P": 320, "T": 958, "rel": 0.0012696625464634964, "mae": 0.0010079794386884835, "ambiguity": 0.4720676629535698, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 3}
+{"P": 320, "T": 958, "rel": 0.0009096673611564822, "mae": 0.0007105093640167779, "ambiguity": 0.45577668795401655, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 4}
+{"P": 321, "T": 961, "rel": 0.0015053108639524596, "mae": 0.0011988178745243705, "ambiguity": 0.6271996834949299, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 0}
+{"P": 321, "T": 961, "rel": 0.0036565376874723504, "mae": 0.0028926456643561553, "ambiguity": 0.7421421483768593, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 1}
+{"P": 321, "T": 961, "rel": 0.0018947351618399469, "mae": 0.0014870665802910797, "ambiguity": 0.5826302307819878, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 2}
+{"P": 321, "T": 961, "rel": 0.004213286499345402, "mae": 0.003313929232308644, "ambiguity": 0.6356448483427517, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 3}
+{"P": 321, "T": 961, "rel": 0.001932274191168175, "mae": 0.0015003543946086107, "ambiguity": 0.5621284178665958, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 4}
+{"P": 322, "T": 964, "rel": 0.836711946293734, "mae": 0.665974442217469, "ambiguity": 0.3366934035542025, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 0}
+{"P": 322, "T": 964, "rel": 0.8609097055434887, "mae": 0.6881839701373453, "ambiguity": 0.42814160685191116, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 1}
+{"P": 322, "T": 964, "rel": 0.7962367334467926, "mae": 0.6332335162789042, "ambiguity": 0.348652403985249, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 2}
+{"P": 322, "T": 964, "rel": 0.7285788199411899, "mae": 0.5765193944351735, "ambiguity": 0.51571389986052, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 3}
+{"P": 322, "T": 964, "rel": 0.7854952215608746, "mae": 0.6275111940310607, "ambiguity": 0.38683059336522657, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 4}
+{"P": 323, "T": 967, "rel": 0.9295833560135651, "mae": 0.7463302625789637, "ambiguity": 0.1912864188693513, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 0}
+{"P": 323, "T": 967, "rel": 0.9282843549297173, "mae": 0.7522145283865482, "ambiguity": 0.20805396085053238, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 1}
+{"P": 323, "T": 967, "rel": 0.8973870887531648, "mae": 0.724824164737436, "ambiguity": 0.15649965596890875, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 2}
+{"P": 323, "T": 967, "rel": 0.8794660875659117, "mae": 0.7032347745130327, "ambiguity": 0.15275340633580134, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 3}
+{"P": 323, "T": 967, "rel": 0.9198865474164943, "mae": 0.7602506925047582, "ambiguity": 0.18564189872492826, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 4}
+{"P": 324, "T": 970, "rel": 0.9563923435114594, "mae": 0.7710735322597156, "ambiguity": 0.18120003122586234, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 0}
+{"P": 324, "T": 970, "rel": 0.9577865720487452, "mae": 0.7824347205531943, "ambiguity": 0.17685358164289575, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 1}
+{"P": 324, "T": 970, "rel": 0.9319351544669663, "mae": 0.7516763510318958, "ambiguity": 0.12406500972687702, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 2}
+{"P": 324, "T": 970, "rel": 0.9259533638954842, "mae": 0.7436729853145926, "ambiguity": 0.23307894292948572, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 3}
+{"P": 324, "T": 970, "rel": 0.9400748420956018, "mae": 0.7790945590180023, "ambiguity": 0.1746140333978448, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 4}
+{"P": 328, "T": 982, "rel": 0.977365488481142, "mae": 0.7901265215711659, "ambiguity": 0.38030723657025783, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 0}
+{"P": 328, "T": 982, "rel": 0.978713852761545, "mae": 0.8046657227192751, "ambiguity": 0.33796224016417414, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 1}
+{"P": 328, "T": 982, "rel": 0.9696697421958441, "mae": 0.7892548418019403, "ambiguity": 0.1741443336485121, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 2}
+{"P": 328, "T": 982, "rel": 0.9695757416786961, "mae": 0.7752642071606632, "ambiguity": 0.32963469366445186, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 3}
+{"P": 328, "T": 982, "rel": 0.9736765817403624, "mae": 0.810368747194408, "ambiguity": 0.15791836243369248, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 4}
+{"P": 336, "T": 1006, "rel": 0.9838460755995942, "mae": 0.7966788724101409, "ambiguity": 0.36346592100327896, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 0}
+{"P": 336, "T": 1006, "rel": 0.9890058321562504, "mae": 0.8159147683862897, "ambiguity": 0.30046209967177795, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 1}
+{"P": 336, "T": 1006, "rel": 0.9782351564374652, "mae": 0.7979054109631618, "ambiguity": 0.2736020999123676, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 2}
+{"P": 336, "T": 1006, "rel": 0.9768492240151156, "mae": 0.7858076993026404, "ambiguity": 0.23265238039413694, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 3}
+{"P": 336, "T": 1006, "rel": 0.9811969290911001, "mae": 0.8171603298119171, "ambiguity": 0.5287109026251468, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 4}
+{"P": 344, "T": 1030, "rel": 0.9910235628106948, "mae": 0.8043915395024172, "ambiguity": 0.3022105746819312, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 0}
+{"P": 344, "T": 1030, "rel": 0.9932152442281142, "mae": 0.8211693807847307, "ambiguity": 0.3235675511945859, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 1}
+{"P": 344, "T": 1030, "rel": 0.9938463504690895, "mae": 0.804663111170275, "ambiguity": 0.5527441327132794, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 2}
+{"P": 344, "T": 1030, "rel": 0.9775387069364216, "mae": 0.7864817369879247, "ambiguity": 0.4783114856111743, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 3}
+{"P": 344, "T": 1030, "rel": 0.9916404149653314, "mae": 0.8233526418548808, "ambiguity": 0.3181758223826779, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 4}
+{"P": 352, "T": 1054, "rel": 0.995068447665752, "mae": 0.8077795272973954, "ambiguity": 0.4424902741727763, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 0}
+{"P": 352, "T": 1054, "rel": 0.9958432646856723, "mae": 0.8238815959790379, "ambiguity": 0.35846434238877, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 1}
+{"P": 352, "T": 1054, "rel": 0.9718981537487209, "mae": 0.7949232723596558, "ambiguity": 0.7220876637604355, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 2}
+{"P": 352, "T": 1054, "rel": 0.9749368952782768, "mae": 0.7910171867828378, "ambiguity": 0.6081988865123507, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 3}
+{"P": 352, "T": 1054, "rel": 0.9916730363085859, "mae": 0.8225077115940048, "ambiguity": 0.4133109452506845, "config": "Transformer-CTC conv (k=7, s=3, F=80)", "capacity": 320, "rep": 4}
+{"P": 60, "T": 119, "rel": 4.6700118364465453e-07, "mae": 3.5204588271738304e-07, "ambiguity": 4.186287810693105e-05, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 0}
+{"P": 60, "T": 119, "rel": 4.6186157302389207e-07, "mae": 3.5092616396768806e-07, "ambiguity": 2.640990721321086e-05, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 1}
+{"P": 60, "T": 119, "rel": 4.5418639381094427e-07, "mae": 3.426202982811021e-07, "ambiguity": 4.2887891471593185e-05, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 2}
+{"P": 60, "T": 119, "rel": 5.699463531644537e-07, "mae": 4.327591816990329e-07, "ambiguity": 2.624433438378276e-05, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 3}
+{"P": 60, "T": 119, "rel": 5.437049018081895e-07, "mae": 4.113640877562466e-07, "ambiguity": 5.169036617751156e-05, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 4}
+{"P": 120, "T": 239, "rel": 4.282333694549641e-06, "mae": 3.1895036665460043e-06, "ambiguity": 0.0006577253687008354, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 0}
+{"P": 120, "T": 239, "rel": 3.946988887953728e-06, "mae": 3.0149248320051457e-06, "ambiguity": 0.0004443343453103009, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 1}
+{"P": 120, "T": 239, "rel": 3.8408728786098205e-06, "mae": 2.89435897203568e-06, "ambiguity": 0.00046587021515544116, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 2}
+{"P": 120, "T": 239, "rel": 5.151818799911615e-06, "mae": 3.880231636525919e-06, "ambiguity": 0.0003410612580491016, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 3}
+{"P": 120, "T": 239, "rel": 5.261605095855922e-06, "mae": 4.079552035304628e-06, "ambiguity": 0.0006673885365314559, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 4}
+{"P": 180, "T": 359, "rel": 2.1031409116312482e-05, "mae": 1.6161165563268753e-05, "ambiguity": 0.005065495329037027, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 0}
+{"P": 180, "T": 359, "rel": 2.041435101008925e-05, "mae": 1.5519711350929982e-05, "ambiguity": 0.004167521175410603, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 1}
+{"P": 180, "T": 359, "rel": 2.17177217927916e-05, "mae": 1.690920417256674e-05, "ambiguity": 0.004548562302755856, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 2}
+{"P": 180, "T": 359, "rel": 2.528016407947675e-05, "mae": 1.9006700609017406e-05, "ambiguity": 0.0026340805599890304, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 3}
+{"P": 180, "T": 359, "rel": 2.197399409309284e-05, "mae": 1.6887938648145087e-05, "ambiguity": 0.006305812667410242, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 4}
+{"P": 216, "T": 431, "rel": 6.392653283247161e-05, "mae": 5.051248417193105e-05, "ambiguity": 0.040041858894653205, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 0}
+{"P": 216, "T": 431, "rel": 7.639323452015555e-05, "mae": 5.972780155941318e-05, "ambiguity": 0.0271444251136024, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 1}
+{"P": 216, "T": 431, "rel": 9.214899434947694e-05, "mae": 7.268267623370986e-05, "ambiguity": 0.02095914861455594, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 2}
+{"P": 216, "T": 431, "rel": 7.717115205711181e-05, "mae": 6.0096652434691344e-05, "ambiguity": 0.01838382631622127, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 3}
+{"P": 216, "T": 431, "rel": 0.00010081706349205068, "mae": 7.83033078270194e-05, "ambiguity": 0.04100067384353612, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 4}
+{"P": 220, "T": 439, "rel": 8.095283941224855e-05, "mae": 6.284827577772502e-05, "ambiguity": 0.04799254400629761, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 0}
+{"P": 220, "T": 439, "rel": 7.725197430814225e-05, "mae": 6.070882791128188e-05, "ambiguity": 0.037594357681375375, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 1}
+{"P": 220, "T": 439, "rel": 8.04123615553262e-05, "mae": 6.310209234791793e-05, "ambiguity": 0.028354407178982115, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 2}
+{"P": 220, "T": 439, "rel": 8.933296667668346e-05, "mae": 7.022325925111891e-05, "ambiguity": 0.02080062665620792, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 3}
+{"P": 220, "T": 439, "rel": 0.00011823320881259916, "mae": 9.279746548636706e-05, "ambiguity": 0.0504706011018202, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 4}
+{"P": 224, "T": 447, "rel": 0.0001280688843674581, "mae": 9.882518663808176e-05, "ambiguity": 0.06396452446233411, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 0}
+{"P": 224, "T": 447, "rel": 0.00010128061380755466, "mae": 7.94140923182858e-05, "ambiguity": 0.04612898401026418, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 1}
+{"P": 224, "T": 447, "rel": 0.00012833564265159235, "mae": 0.00010100658527190229, "ambiguity": 0.03902316719989217, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 2}
+{"P": 224, "T": 447, "rel": 0.00011372966502588234, "mae": 8.950321730772799e-05, "ambiguity": 0.025870870939061555, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 3}
+{"P": 224, "T": 447, "rel": 0.00016969986871622077, "mae": 0.00013503776718622643, "ambiguity": 0.06751187556581126, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 4}
+{"P": 228, "T": 455, "rel": 0.0001362542904838484, "mae": 0.00010617203086906566, "ambiguity": 0.09324332142527202, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 0}
+{"P": 228, "T": 455, "rel": 0.00012299631034420815, "mae": 9.710012783596931e-05, "ambiguity": 0.0661843581560586, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 1}
+{"P": 228, "T": 455, "rel": 0.0001279013640169473, "mae": 0.00010101787971712453, "ambiguity": 0.05367030935035415, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 2}
+{"P": 228, "T": 455, "rel": 0.00014410656464069086, "mae": 0.00011357049720567439, "ambiguity": 0.041484162899918645, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 3}
+{"P": 228, "T": 455, "rel": 0.00019091045534063559, "mae": 0.00014852120505985778, "ambiguity": 0.09439121100172512, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 4}
+{"P": 232, "T": 463, "rel": 0.0002550826775952423, "mae": 0.00019963064526002644, "ambiguity": 0.18111779628918784, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 0}
+{"P": 232, "T": 463, "rel": 0.00013255494508634128, "mae": 0.0001045356976750971, "ambiguity": 0.11752545570606146, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 1}
+{"P": 232, "T": 463, "rel": 0.0001421699399023654, "mae": 0.00011194845346650051, "ambiguity": 0.08106856983566173, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 2}
+{"P": 232, "T": 463, "rel": 0.00019486030914349137, "mae": 0.00015443506741259327, "ambiguity": 0.06787534335550302, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 3}
+{"P": 232, "T": 463, "rel": 0.0003161799639627561, "mae": 0.00024362353177023065, "ambiguity": 0.17502088586136283, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 4}
+{"P": 236, "T": 471, "rel": 0.00038934551849268225, "mae": 0.00030448644890647425, "ambiguity": 0.32513581111966017, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 0}
+{"P": 236, "T": 471, "rel": 0.0002896601456179904, "mae": 0.00022856312456817846, "ambiguity": 0.22777956307803088, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 1}
+{"P": 236, "T": 471, "rel": 0.00035423973498528044, "mae": 0.0002812058162973643, "ambiguity": 0.18400840647682432, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 2}
+{"P": 236, "T": 471, "rel": 0.00034113493799112313, "mae": 0.0002715007286076087, "ambiguity": 0.12161104570871867, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 3}
+{"P": 236, "T": 471, "rel": 0.0003258766786822577, "mae": 0.0002519892347631723, "ambiguity": 0.24580653666901633, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 4}
+{"P": 237, "T": 473, "rel": 0.0006628950892263916, "mae": 0.0005125421780957991, "ambiguity": 0.4637388500189962, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 0}
+{"P": 237, "T": 473, "rel": 0.0003549868042717124, "mae": 0.0002788937214137544, "ambiguity": 0.3121476528590175, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 1}
+{"P": 237, "T": 473, "rel": 0.00034379742681494863, "mae": 0.0002737663499307073, "ambiguity": 0.2110660642679107, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 2}
+{"P": 237, "T": 473, "rel": 0.00035828022972718524, "mae": 0.000282076292654636, "ambiguity": 0.16880429833317762, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 3}
+{"P": 237, "T": 473, "rel": 0.0005452494099659317, "mae": 0.0004341516529912104, "ambiguity": 0.3219525013572594, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 4}
+{"P": 238, "T": 475, "rel": 0.0006747042942787419, "mae": 0.000530255786588984, "ambiguity": 0.4680280959940847, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 0}
+{"P": 238, "T": 475, "rel": 0.00031789952618865836, "mae": 0.0002509844153571192, "ambiguity": 0.3351931371620401, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 1}
+{"P": 238, "T": 475, "rel": 0.00028378479710356163, "mae": 0.00022303063829031734, "ambiguity": 0.19214336636695428, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 2}
+{"P": 238, "T": 475, "rel": 0.00042900506641134966, "mae": 0.00033563458459925314, "ambiguity": 0.17539834407575322, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 3}
+{"P": 238, "T": 475, "rel": 0.0006624803608489745, "mae": 0.000521451717067484, "ambiguity": 0.41687501737400584, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 4}
+{"P": 239, "T": 477, "rel": 0.0007102530420624604, "mae": 0.000556383291448295, "ambiguity": 0.5184823030487937, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 0}
+{"P": 239, "T": 477, "rel": 0.0005218894382312986, "mae": 0.00041140765944306697, "ambiguity": 0.4233365649522006, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 1}
+{"P": 239, "T": 477, "rel": 0.00039354375806193565, "mae": 0.000311289345480116, "ambiguity": 0.2620816387630724, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 2}
+{"P": 239, "T": 477, "rel": 0.0005830024623024349, "mae": 0.00046283712549134823, "ambiguity": 0.34628035050321293, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 3}
+{"P": 239, "T": 477, "rel": 0.000750272191669424, "mae": 0.0005892731005009775, "ambiguity": 0.40063434583073737, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 4}
+{"P": 240, "T": 479, "rel": 0.0009117992353165164, "mae": 0.0007000872763706893, "ambiguity": 0.5273157247672807, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 0}
+{"P": 240, "T": 479, "rel": 0.0009729359045908675, "mae": 0.0007730351380673535, "ambiguity": 0.612048825520609, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 1}
+{"P": 240, "T": 479, "rel": 0.0007384028822394656, "mae": 0.0005768426383955984, "ambiguity": 0.39621750794352456, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 2}
+{"P": 240, "T": 479, "rel": 0.0013629460329768648, "mae": 0.0010653513363216357, "ambiguity": 0.5019882408977493, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 3}
+{"P": 240, "T": 479, "rel": 0.0013416247519064818, "mae": 0.0010589415219758975, "ambiguity": 0.6313170899422876, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 4}
+{"P": 241, "T": 481, "rel": 0.002035650793819184, "mae": 0.0016130298541876726, "ambiguity": 0.6816123138560469, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 0}
+{"P": 241, "T": 481, "rel": 0.0034372199121393767, "mae": 0.0027183110734404796, "ambiguity": 0.776173650678372, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 1}
+{"P": 241, "T": 481, "rel": 0.0017174875916397877, "mae": 0.0013499826077689211, "ambiguity": 0.5743960885080813, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 2}
+{"P": 241, "T": 481, "rel": 0.00281076491393139, "mae": 0.0022366321867859722, "ambiguity": 0.6284117965773803, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 3}
+{"P": 241, "T": 481, "rel": 0.0038969490304770157, "mae": 0.0030610231369690138, "ambiguity": 0.7438268428530084, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 4}
+{"P": 242, "T": 483, "rel": 0.8998707767465267, "mae": 0.7125979676684062, "ambiguity": 0.2733199337530978, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 0}
+{"P": 242, "T": 483, "rel": 0.9055178392206805, "mae": 0.7249052599970348, "ambiguity": 0.1315522355309664, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 1}
+{"P": 242, "T": 483, "rel": 0.8428840075827505, "mae": 0.6722006917955161, "ambiguity": 0.1669176937235571, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 2}
+{"P": 242, "T": 483, "rel": 0.788850302709231, "mae": 0.6263310999496371, "ambiguity": 0.16696296142328576, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 3}
+{"P": 242, "T": 483, "rel": 0.8891100879315772, "mae": 0.7367053149529226, "ambiguity": 0.16914840082941524, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 4}
+{"P": 243, "T": 485, "rel": 0.949248648388808, "mae": 0.7576674235475325, "ambiguity": 0.10319418835747952, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 0}
+{"P": 243, "T": 485, "rel": 0.9512188179633813, "mae": 0.7632484132534354, "ambiguity": 0.1126747284880988, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 1}
+{"P": 243, "T": 485, "rel": 0.9179035105213197, "mae": 0.7343087775364378, "ambiguity": 0.11404745533451904, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 2}
+{"P": 243, "T": 485, "rel": 0.8870582879596528, "mae": 0.7124545766346296, "ambiguity": 0.12328289078913197, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 3}
+{"P": 243, "T": 485, "rel": 0.9473968959840838, "mae": 0.798047058323654, "ambiguity": 0.10007644941125189, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 4}
+{"P": 244, "T": 487, "rel": 0.9580038558642813, "mae": 0.7644038214299692, "ambiguity": 0.11963029975733198, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 0}
+{"P": 244, "T": 487, "rel": 0.9624820897313556, "mae": 0.776013087533258, "ambiguity": 0.12728566018251716, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 1}
+{"P": 244, "T": 487, "rel": 0.9454168649520075, "mae": 0.7605300668989486, "ambiguity": 0.12307096613874459, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 2}
+{"P": 244, "T": 487, "rel": 0.9228007455177949, "mae": 0.7381600416868203, "ambiguity": 0.1377842769300377, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 3}
+{"P": 244, "T": 487, "rel": 0.969799401110319, "mae": 0.8148749005866807, "ambiguity": 0.1178504989364164, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 4}
+{"P": 248, "T": 495, "rel": 0.9796644639921932, "mae": 0.7882770525004805, "ambiguity": 0.18080677548420548, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 0}
+{"P": 248, "T": 495, "rel": 0.9763774725967898, "mae": 0.7859097864466585, "ambiguity": 0.19318819669707016, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 1}
+{"P": 248, "T": 495, "rel": 0.9677508213626582, "mae": 0.783806698394724, "ambiguity": 0.16420666702761716, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 2}
+{"P": 248, "T": 495, "rel": 0.9639286623126969, "mae": 0.7760744967527786, "ambiguity": 0.1921782566514596, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 3}
+{"P": 248, "T": 495, "rel": 0.9872038568718933, "mae": 0.8292459070108319, "ambiguity": 0.17502281870922576, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 4}
+{"P": 256, "T": 511, "rel": 0.9873239401352887, "mae": 0.799174812234511, "ambiguity": 0.31046859974098184, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 0}
+{"P": 256, "T": 511, "rel": 0.9883185457089074, "mae": 0.8008947821673998, "ambiguity": 0.2681898134665676, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 1}
+{"P": 256, "T": 511, "rel": 0.9828114309682118, "mae": 0.7979697845361514, "ambiguity": 0.2331478794010328, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 2}
+{"P": 256, "T": 511, "rel": 0.9717706372955062, "mae": 0.7810138929303504, "ambiguity": 0.22725244334568045, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 3}
+{"P": 256, "T": 511, "rel": 0.9906044953979452, "mae": 0.8320785829087611, "ambiguity": 0.24264334260938378, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 4}
+{"P": 264, "T": 527, "rel": 0.9914049235702048, "mae": 0.8050058857334383, "ambiguity": 0.3779147698387255, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 0}
+{"P": 264, "T": 527, "rel": 0.9927256860571222, "mae": 0.8083220553774215, "ambiguity": 0.31062420527933976, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 1}
+{"P": 264, "T": 527, "rel": 0.9857659479873967, "mae": 0.8002687124468394, "ambiguity": 0.28293359409958674, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 2}
+{"P": 264, "T": 527, "rel": 0.9799972259322794, "mae": 0.7900973044393498, "ambiguity": 0.26157696985788836, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 3}
+{"P": 264, "T": 527, "rel": 0.992875561788312, "mae": 0.8327925861355941, "ambiguity": 0.30032130190341166, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 4}
+{"P": 272, "T": 543, "rel": 0.9936427146069117, "mae": 0.8067564734242645, "ambiguity": 0.3854091085647893, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 0}
+{"P": 272, "T": 543, "rel": 0.9937888686607123, "mae": 0.8088681434648237, "ambiguity": 0.34277919893794156, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 1}
+{"P": 272, "T": 543, "rel": 0.9912563411486605, "mae": 0.8071746849417631, "ambiguity": 0.33717179131826097, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 2}
+{"P": 272, "T": 543, "rel": 0.9861358967155122, "mae": 0.7940919962141927, "ambiguity": 0.35088600103540346, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 3}
+{"P": 272, "T": 543, "rel": 0.9942707235519084, "mae": 0.8345350832472349, "ambiguity": 0.3427701035821311, "config": "Conv (k=5, s=2, F=80)", "capacity": 240, "rep": 4}
