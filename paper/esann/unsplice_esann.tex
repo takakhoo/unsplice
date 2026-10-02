@@ -110,19 +110,19 @@ what raises the capacity: a linear network would leak the same 339-dimensional s
 A candidate window $c$ can be tested: the residual $r(c)=\Pi_\ell^{\perp}[h_\ell(c),1]$ vanishes on true
 windows, and generically only there, since a $kF$-dimensional manifold meets a $T$-dimensional subspace
 of a much larger space in isolated points. The test does not say \emph{which} frame a window is, so
-descending on all frames jointly stalls. The padding breaks the symmetry. The first window is
-$[0,\dots,0,x_1,\dots,x_{c+1}]$: we solve for it by Levenberg--Marquardt, starting from the opening
+descending on all frames jointly stalls. The padding breaks the symmetry. The first window holds $c$ zero
+frames followed by $x_1,\dots,x_{c+1}$: we solve for it by Levenberg--Marquardt, starting from the opening
 frames of public utterances. Every later window shares all but one frame with its predecessor, so each
 step has only $F$ unknowns. We use the spans of the second and third layers (the LSTM-input span is noisier and is needed only beyond 37\,s), re-fit the last 26 frames jointly every 8 steps to stop drift, and stop
 when six consecutive decoded frames are zero, which is the padding at the far end. The length is
-therefore found, not given. A final joint refinement polishes all frames.
+therefore an output of the attack. A final joint refinement polishes all frames.
 
 \section{Experiments}
 
 \textbf{Setup.} LibriSpeech \cite{panayotov2015librispeech} test-clean, one float32 gradient of the CTC
 loss per utterance. DeepSpeech-1: 26 MFCCs at 50\,Hz, $c=6$, 2{,}048 units, clipped ReLU. Transformer-CTC:
-80 log-mel bins at 100\,Hz, per-utterance normalisation, Conv1d$(80,1536,k{=}7,s{=}3)$ with gated linear
-unit, 12 blocks. Both are attacked at random initialisation and at checkpoints of training on 100\,h.
+80 log-mel bins at 100\,Hz, per-utterance normalisation, a 1-D convolution from 80 to 1{,}536 channels ($k=7$, $s=3$) with a gated
+linear unit, 12 blocks. Both are attacked at random initialisation and at checkpoints of training on 100\,h.
 The attacker receives the update and the model only. An utterance counts as recovered if the mean
 absolute error (MAE) is below $10^{-2}$ (MFCCs have mean magnitude 8) or the SNR exceeds 30\,dB (log-mel).
 
@@ -165,8 +165,8 @@ below $10^{-3}$ up to $(k-s)F$ windows (312, 468, 320, 240) and reaches order on
 between 6.3 and \DSlongMaxAudio\,s (median MAE $\DSlongMAE$), including the longest utterance of the
 set, \DSlongestFrames{} frames. The failures are again digital silence. Trained checkpoints decode equally well (12 of 12).
 
-\textbf{Baseline.} Gradient matching on the output layer through a twice-differentiable CTC, with
-transcript and length given, ends at MAE \GMmae{} after \GMsec\,s on 2\,s utterances: the gradient is
+\textbf{Baseline.} Gradient matching on the output layer, through a CTC loss that can be differentiated
+twice and with transcript and length given, ends at MAE \GMmae{} after \GMsec\,s on 2\,s utterances: the gradient is
 matched (cosine distance below $10^{-2}$) and the features are not, as the output-layer gradient has
 rank at most 29.
 

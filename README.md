@@ -94,7 +94,7 @@ Every test-clean utterance attacked so far. The gradient-matching baseline and t
 
 ![Attack success along training](docs/figures/training.png)
 
-The same attack on checkpoints saved while training each model on LibriSpeech (100 h, then 460 h). The closed form depends on the weights only through the backward signals $g_p$, which need to be independent, not informative.
+The same attack on checkpoints saved while training each model on LibriSpeech (100 h, then 460 h). The closed form depends on the weights only through the backward signals $g_p$, which only need to be linearly independent.
 
 | Checkpoint | dev-clean WER | Attack | n | Recovered | Median SNR |
 |---|---|---|---|---|---|
@@ -199,7 +199,7 @@ Numbers for other papers are the ones they report, on their own data. The low-ra
 
 - **Digital silence.** Runs of 13 or more bit-identical frames produce identical windows. The rank then undercounts the length and the linear system has more than one solution (for example, stretches of speech on either side of silence can trade places). The solver detects this with a uniqueness check and the result is counted as a failure. This affects 1.5% of test-clean, all in recordings with edited-in silence.
 - **Capacity.** The closed form stops at $(k-s)F$ windows in total across everything in the update.
-- **Features, not waveforms.** The attack recovers what the front end computes. 26 MFCCs do not carry pitch; the vocoder infers it.
+- **Features only.** The attack recovers what the front end computes. 26 MFCCs do not carry pitch; the vocoder infers it.
 - **Precision of the update.** Results are for float32 gradients. Updates sent after tiny local steps lose precision to rounding.
 - **Trained Transformer.** Without the length, recovery at the trained checkpoint is 83%.
 - **Not attacked.** Whisper, wav2vec 2.0, DeepSpeech-2 and QuartzNet first layers do not leak a usable span, and no attack on them is claimed. The Conformer decoder mostly fails.

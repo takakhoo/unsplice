@@ -67,7 +67,7 @@ D["probe"] = S.get("architecture_probe", {}).get("rows", [])
 D["limits"] = [
     f"Digital silence. Runs of 13 or more bit-identical frames make windows identical and the solution non-unique. The solver flags these; they are {pct(a['failures'] / a['n'], 1)} of the short utterances and count as failures.",
     "Capacity. The closed form stops at (k − s) × F windows in total across everything in one update. Deeper layers extend it to the width of those layers.",
-    "Features, not waveforms. The attack recovers what the front end computes. 26 MFCCs carry no pitch, so the vocoder infers it.",
+    "Features only. The attack recovers what the front end computes. 26 MFCCs carry no pitch, so the vocoder infers it.",
     "Local Adam, pruning and sign compression break the low-rank structure, and enough noise hides the span.",
     "Whisper, wav2vec 2.0, DeepSpeech-2 and QuartzNet first layers do not leak a usable span. No attack on them is claimed.",
     "Secure aggregation over enough clients exceeds every capacity measured here.",
